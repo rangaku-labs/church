@@ -1,884 +1,280 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>༄༄࿐ Welcome to the Digital Temple of Cosmic Truth ༄༄࿐</title>
-  <meta name="keywords" content="enlightenment, dharma, cosmic truth, webring, guestbook, MIDI, prayer wheel">
-  <meta name="description" content="Your gateway to digital enlightenment - Now with Virtual Prayer Wheel!">
-  <style>
-    /* Base Variables */
-    :root {
-      --tibetan-maroon: #800000;
-      --tibetan-orange: #CD5C0E;
-      --tibetan-yellow: #FFB700;
-      --tibetan-gold: #FFD700;
-      --tibetan-turquoise: #40E0D0;
-      --deep-maroon: #4A0000;
-      --dark-orange: #8B4513;
-      --deep-turquoise: #008B8B;
-      --prayer-flag-blue: #0066CC;
-      --prayer-flag-white: #FFFFFF;
-      --prayer-flag-red: #CC0000;
-      --prayer-flag-green: #006600;
-      --prayer-flag-yellow: #FFCC00;
-    }
-    
-    /* Base Styles */
-    body {
-      background-color: var(--tibetan-maroon);
-      color: var(--tibetan-yellow);
-      font-family: "Times New Roman", Times, serif;
-      margin: 0;
-      padding: 0;
-      cursor: url("/api/placeholder/32/32"), auto;
-      background-image: url("data:image/gif;base64,R0lGODlhCgAKAIAAAAAAAP///yH5BAEAAAEALAAAAAAKAAoAAAIRjI+py+0Po5y02oszrHzfLQA7");
-    }
-    
-    /* Prayer Flags Animation */
-    .prayer-flags {
-      height: 30px;
-      background: repeating-linear-gradient(
-        90deg,
-        var(--prayer-flag-blue) 0px,
-        var(--prayer-flag-blue) 100px,
-        var(--prayer-flag-white) 100px,
-        var(--prayer-flag-white) 200px,
-        var(--prayer-flag-red) 200px,
-        var(--prayer-flag-red) 300px,
-        var(--prayer-flag-green) 300px,
-        var(--prayer-flag-green) 400px,
-        var(--prayer-flag-yellow) 400px,
-        var(--prayer-flag-yellow) 500px
-      );
-      animation: wave 2s infinite linear;
-      margin-bottom: 20px;
-      border-top: 2px solid var(--tibetan-gold);
-      border-bottom: 2px solid var(--tibetan-gold);
-    }
-    
-    /* Butter Lamp Animation */
-    .butter-lamp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 50px;
-      height: 50px;
-      background: radial-gradient(circle at center, 
-        rgba(255,215,0,0.9) 0%, 
-        rgba(255,165,0,0.6) 50%, 
-        rgba(255,69,0,0.3) 100%);
-      animation: flicker 0.5s infinite alternate;
-      border-radius: 50%;
-      z-index: 1000;
-    }
-    
-    /* Main Container */
-    .container {
-      width: 800px;
-      margin: 0 auto;
-      background: linear-gradient(45deg, var(--deep-maroon), var(--dark-orange));
-      border: 5px ridge var(--tibetan-gold);
-      padding: 20px;
-      position: relative;
-      overflow: hidden;
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-    }
-    
-    /* Giant Dharma Wheel Watermark */
-    .container::before {
-      content: "☸";
-      position: absolute;
-      font-size: 400px;
-      opacity: 0.1;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: var(--tibetan-gold);
-      z-index: 0;
-      animation: rotate 60s linear infinite;
-    }
-    
-    /* Header Section */
-    .header {
-      text-align: center;
-      border: 3px double var(--tibetan-gold);
-      padding: 20px;
-      background: var(--deep-maroon);
-      margin-bottom: 20px;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .header::before,
-    .header::after {
-      content: "࿅";
-      color: var(--tibetan-gold);
-      font-size: 24px;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    
-    /* Welcome Banner */
-    .welcome-banner {
-      position: relative;
-      margin: 20px auto;
-      padding: 10px;
-      background: var(--deep-maroon);
-      border: 2px solid var(--tibetan-gold);
-      text-align: center;
-    }
-    
-    .welcome-banner::before,
-    .welcome-banner::after {
-      content: "☸";
-      color: var(--tibetan-gold);
-      font-size: 24px;
-      margin: 0 10px;
-      animation: spin 4s linear infinite;
-    }
-    
-    /* Navigation Menu */
-    .nav-menu {
-      background: var(--deep-maroon);
-      border: 2px outset var(--tibetan-gold);
-      margin: 20px 0;
-      padding: 10px;
-      text-align: center;
-      position: relative;
-    }
-    
-    .nav-menu a {
-      color: var(--tibetan-turquoise);
-      text-decoration: none;
-      padding: 5px 15px;
-      margin: 0 5px;
-      border: 1px solid var(--tibetan-gold);
-      background: var(--deep-maroon);
-      display: inline-block;
-      font-weight: bold;
-    }
-    
-    .nav-menu a:hover {
-      background: var(--dark-orange);
-      color: var(--tibetan-gold);
-      transform: rotate(5deg);
-      transition: transform 0.3s;
-    }
-    
-    /* Animations */
-    @keyframes wave {
-      0% { background-position: 0 0; }
-      100% { background-position: 500px 0; }
-    }
-    
-    @keyframes flicker {
-      0% { opacity: 0.8; }
-      100% { opacity: 1; }
-    }
-    
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-    
-    @keyframes tibetan-glow {
-      0% { text-shadow: 0 0 5px var(--tibetan-gold); }
-      50% { text-shadow: 0 0 20px var(--tibetan-turquoise); }
-      100% { text-shadow: 0 0 5px var(--tibetan-gold); }
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>★·.·´¯`·.·★ Digital Mahayana Library ★·.·´¯`·.·★</title>
+    <style>
+        :root {
+            --tibetan-maroon: #800000;
+            --tibetan-gold: #FFD700;
+            --tibetan-turquoise: #40E0D0;
+            --deep-maroon: #4A0000;
+            --prayer-flag-blue: #0066CC;
+            --prayer-flag-white: #FFFFFF;
+            --prayer-flag-red: #CC0000;
+            --prayer-flag-green: #006600;
+            --prayer-flag-yellow: #FFCC00;
+        }
+
+        body {
+            background: var(--tibetan-maroon);
+            color: #ffffff;
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .prayer-flags {
+            height: 30px;
+            background: repeating-linear-gradient(
+                90deg,
+                var(--prayer-flag-blue) 0px,
+                var(--prayer-flag-blue) 100px,
+                var(--prayer-flag-white) 100px,
+                var(--prayer-flag-white) 200px,
+                var(--prayer-flag-red) 200px,
+                var(--prayer-flag-red) 300px,
+                var(--prayer-flag-green) 300px,
+                var(--prayer-flag-green) 400px,
+                var(--prayer-flag-yellow) 400px,
+                var(--prayer-flag-yellow) 500px
+            );
+            animation: wave 2s infinite linear;
+            margin-bottom: 20px;
+            border-top: 2px solid var(--tibetan-gold);
+            border-bottom: 2px solid var(--tibetan-gold);
+        }
+
+        @keyframes wave {
+            0% { background-position: 0 0; }
+            100% { background-position: 500px 0; }
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--deep-maroon);
+            padding: 20px;
+            border: 3px solid var(--tibetan-gold);
+            border-radius: 10px;
+            box-shadow: 0 0 15px var(--tibetan-gold), inset 0 0 15px var(--tibetan-gold);
+        }
+        
+        .welcome-banner {
+            background: #000000;
+            text-align: center;
+            padding: 10px;
+            margin: 20px 0;
+            border: 1px solid var(--tibetan-gold);
+            color: var(--tibetan-turquoise);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: var(--tibetan-gold);
+            text-shadow: 2px 2px 4px #000;
+            padding: 20px;
+            border: 2px solid var(--tibetan-gold);
+            background: linear-gradient(45deg, rgba(74, 0, 0, 0.8), rgba(128, 0, 0, 0.8));
+            border-radius: 10px;
+        }
+        
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            font-family: "Courier New", monospace;
+        }
+        
+        .menu-item {
+            color: var(--tibetan-turquoise);
+            text-decoration: none;
+        }
+        
+        .menu-item:hover {
+            color: var(--tibetan-gold);
+        }
+        
+        .marquee {
+            background: linear-gradient(45deg, var(--deep-maroon), var(--tibetan-maroon));
+            padding: 10px;
+            margin: 20px 0;
+            text-align: center;
+            border: 2px solid var(--tibetan-gold);
+            font-family: "Courier New", monospace;
+            color: var(--tibetan-gold);
+        }
+        
+        .navigation {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding: 20px 0;
+        }
+        
+        .nav-item {
+            background: linear-gradient(45deg, var(--deep-maroon), var(--tibetan-maroon));
+            padding: 20px;
+            border: 1px solid var(--tibetan-gold);
+            border-radius: 5px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+        
+        .nav-item:hover {
+            transform: scale(1.05) rotate(-2deg);
+            box-shadow: 0 0 20px var(--tibetan-gold);
+        }
+        
+        .nav-item a {
+            color: var(--tibetan-gold);
+            text-decoration: none;
+            display: block;
+        }
+        
+        .nav-item h3 {
+            margin: 0 0 10px 0;
+            font-size: 24px;
+            text-shadow: 2px 2px 4px #000;
+        }
+        
+        .description {
+            color: #ffffff;
+            font-size: 0.9em;
+            margin-top: 10px;
+            line-height: 1.4;
+        }
+        
+        .counter {
+            text-align: center;
+            margin-top: 20px;
+            font-family: "Courier New", Courier, monospace;
+            color: var(--tibetan-gold);
+            border: 3px double var(--tibetan-gold);
+            padding: 10px;
+            background: linear-gradient(45deg, #000000, var(--deep-maroon));
+        }
+        
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .hit-counter {
+            font-family: "Digital", "Courier New", monospace;
+            background: #000;
+            padding: 5px 10px;
+            border: 2px inset #808080;
+            color: var(--tibetan-turquoise);
+        }
+        
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            h1 { font-size: 24px; }
+            .navigation { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
-<!-- Start of visible content -->
-<div class="butter-lamp"></div>
-<div class="container">
-    <!-- Prayer Flags Banner -->
-    <div class="prayer-flags"></div>
-    
-    <!-- Best Viewed Banner -->
-    <center>
-        <table border="0" cellpadding="2" bgcolor="#000000" width="100%">
-            <tr>
-                <td align="center">
-                    <font color="#40E0D0" size="-1">
-                        ༄ Best viewed with enlightened consciousness ༄<br>
-                        and Netscape Navigator 4.0 at 800x600 ༄<br>
-                        <blink>Loading your karma... Please wait...</blink>
-                    </font>
-                </td>
-            </tr>
-        </table>
-    </center>
-    
-    <!-- Header Section -->
-    <div class="header">
-        <img src="/api/placeholder/100/100" alt="Spinning Prayer Wheel" class="prayer-wheel">
-        <h1 class="welcome-text">
-            ༄་་་ The Digital Temple of Cosmic Truth ་་་༄
-        </h1>
-        <div class="hit-counter">
-            <table border="1" cellpadding="2" cellspacing="0" bgcolor="#000000">
-                <tr>
-                    <td>
-                        <font color="#40E0D0">
-                            Seekers of Truth: <blink>000,133,700</blink><br>
-                            Merit Accumulated: <blink>∞</blink>
-                        </font>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    
-    <!-- Triple Marquee Zone -->
-    <marquee behavior="alternate" scrollamount="5">
-        ༄ Welcome to the Digital Temple ༄ Om Mani Padme Hum ༄ Cosmic Wisdom Awaits ༄
-    </marquee>
-    <marquee behavior="scroll" direction="right" scrollamount="3">
-        ★࿇࿇࿇★࿇࿇࿇★࿇࿇࿇★࿇࿇࿇★࿇࿇࿇★
-    </marquee>
-    <marquee behavior="scroll" scrollamount="2">
-        ༄ Now serving enlightenment at 56k modem speeds ༄ Virtual Prayer Wheel spinning at 108 RPM ༄
-    </marquee>
-
-    <!-- Navigation Menu -->
-    <div class="nav-menu">
-        <a href="#">☸ HOME</a> ༄
-        <a href="#">☸ TEACHINGS</a> ༄
-        <a href="#">☸ VIRTUAL SHRINE</a> ༄
-        <a href="#">☸ MEDITATION ROOM</a> ༄
-        <a href="#">☸ DHARMA CHAT</a> ༄
-        <a href="#">☸ MERIT SHOP</a>
-    </div>
-
-<style>
-    /* Virtual Prayer Wheel Styles */
-    .virtual-prayer-wheel {
-      border: 3px ridge var(--tibetan-gold);
-      background: var(--deep-maroon);
-      padding: 15px;
-      margin: 20px 0;
-      text-align: center;
-    }
-    
-    .java-warning {
-      font-size: 10px;
-      color: var(--tibetan-orange);
-      border: 1px dashed var(--tibetan-gold);
-      padding: 5px;
-      margin: 5px;
-      background: #000000;
-    }
-    
-    /* MIDI Player Styles */
-    .midi-player {
-      background: var(--deep-maroon);
-      border: 2px outset var(--tibetan-gold);
-      padding: 10px;
-      margin: 10px 0;
-      text-align: center;
-    }
-    
-    .playlist {
-      font-family: "Courier New", monospace;
-      color: var(--tibetan-turquoise);
-      font-size: 12px;
-    }
-    
-    .playlist td {
-      padding: 3px;
-      border: 1px solid var(--tibetan-orange);
-    }
-    
-    /* Merit Badge Collection */
-    .merit-badges {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      margin: 20px 0;
-      padding: 10px;
-      background: var(--deep-maroon);
-      border: 2px groove var(--tibetan-gold);
-    }
-    
-    .badge {
-      border: 1px solid var(--tibetan-gold);
-      padding: 5px;
-      background: #000000;
-    }
-    
-    /* Under Construction Zone */
-    .construction-zone {
-      text-align: center;
-      margin: 20px 0;
-      padding: 10px;
-      border: 2px dashed var(--tibetan-orange);
-      background: repeating-linear-gradient(
-        45deg,
-        var(--deep-maroon),
-        var(--deep-maroon) 10px,
-        var(--dark-orange) 10px,
-        var(--dark-orange) 20px
-      );
-    }
-</style>
-
-<!-- Main Content Section -->
-<div class="main-content-area">
-    <!-- Virtual Prayer Wheel Section -->
-    <div class="virtual-prayer-wheel">
-        <table width="100%" border="0" cellpadding="5" bgcolor="#000000">
-            <tr>
-                <td align="center">
-                    <font color="#FFD700" size="+1">
-                        ༄ Virtual Prayer Wheel ༄<br>
-                        <img src="/api/placeholder/150/150" alt="Prayer Wheel" class="prayer-wheel">
-                    </font>
-                    <br>
-                    <table width="80%" border="1" cellpadding="3">
-                        <tr>
-                            <td bgcolor="#4A0000">
-                                <marquee scrollamount="2">
-                                    <font color="#40E0D0">
-                                        Om Mani Padme Hum - Accumulating merit with every spin...
-                                    </font>
-                                </marquee>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="java-warning">
-                        <blink>⚠️ Requires Java Virtual Machine 1.1.4 or higher ⚠️</blink>
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </div>
-
-    <!-- MIDI Player -->
-    <div class="midi-player">
-        <img src="/api/placeholder/20/20" alt="Musical Note">
-        <font color="#FFD700">༄ Dharma MIDI Collection ༄</font>
-        <img src="/api/placeholder/20/20" alt="Musical Note">
-        <br>
-        <table class="playlist" width="90%" align="center">
-            <tr bgcolor="#000000">
-                <td>▶ Om_Mani_Padme_Hum.mid</td>
-                <td><blink>Now Playing!</blink></td>
-            </tr>
-            <tr bgcolor="#200000">
-                <td>Medicine_Buddha_Mantra.mid</td>
-                <td>[Play]</td>
-            </tr>
-            <tr bgcolor="#000000">
-                <td>Green_Tara_Chant.mid</td>
-                <td>[Play]</td>
-            </tr>
-        </table>
-        <br>
-        <font size="-1">
-            <a href="#">[Stop Music]</a> | 
-            <a href="#">[Download MIDI Collection]</a>
-        </font>
-    </div>
-
-    <!-- Merit Badge Collection -->
-    <div class="merit-badges">
-        <img src="/api/placeholder/88/31" alt="Cyber Sangha Certified" class="badge">
-        <img src="/api/placeholder/88/31" alt="Made with Sacred Intention" class="badge">
-        <img src="/api/placeholder/88/31" alt="Dharma Online Award 1995" class="badge">
-        <img src="/api/placeholder/88/31" alt="Virtual Tibet Ring Member" class="badge">
-        <img src="/api/placeholder/88/31" alt="Blessed by Digital Lama" class="badge">
-    </div>
-
-    <!-- Construction Zone -->
-    <div class="construction-zone">
-        <img src="/api/placeholder/50/50" alt="Construction" class="rotating">
-        <font color="#FFD700">
-            <blink>༄ The Tantric Teachings Section is Under Construction ༄</blink>
-        </font>
-        <img src="/api/placeholder/50/50" alt="Construction" class="rotating">
-        <br>
-        <font color="#40E0D0" size="-1">
-            Our digital monks are working diligently to upload ancient wisdom
-        </font>
-    </div>
-
-    <!-- Chat Applet -->
-    <div class="dharma-chat">
-        <table width="100%" border="2" cellpadding="5" bgcolor="#000000">
-            <tr>
-                <td align="center">
-                    <font color="#FFD700">
-                        ༄ Dharma Chat Realm ༄<br>
-                        <img src="/api/placeholder/200/150" alt="Chat Window">
-                    </font>
-                    <div class="java-warning">
-                        <blink>
-                            Click to enter the virtual sangha!<br>
-                            (Requires Java Chat Applet)
-                        </blink>
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </div>
-
-    <!-- Download Section -->
-    <div class="downloads">
-        <table width="100%" border="1" cellpadding="5">
-            <tr bgcolor="#4A0000">
-                <td colspan="2" align="center">
-                    <font color="#FFD700">༄ Sacred Downloads ༄</font>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="/api/placeholder/20/20" alt="Download">
-                    Virtual Incense Burner (486DX required)
-                </td>
-                <td>[2.3MB]</td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="/api/placeholder/20/20" alt="Download">
-                    Digital Mala Counter
-                </td>
-                <td>[1.1MB]</td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="/api/placeholder/20/20" alt="Download">
-                    Mandala Screensaver
-                </td>
-                <td>[3.4MB]</td>
-            </tr>
-        </table>
-    </div>
-</div>
-
-  <style>
-    /* Guestbook Styles */
-    .guestbook {
-        background: var(--deep-maroon);
-        border: 3px ridge var(--tibetan-gold);
-        margin: 20px 0;
-        padding: 10px;
-    }
-    
-    .guestbook-entry {
-        border: 1px solid var(--tibetan-orange);
-        margin: 5px 0;
-        padding: 5px;
-        background: #000000;
-        font-family: "Courier New", monospace;
-    }
-    
-    /* Webring Styles */
-    .webring {
-        background: url("/api/placeholder/800/100") center no-repeat;
-        border: 2px groove var(--tibetan-gold);
-        padding: 20px;
-        margin: 20px 0;
-        text-align: center;
-    }
-    
-    .mandala-border {
-        border: 10px solid transparent;
-        border-image: url("/api/placeholder/100/100") 30 round;
-        padding: 15px;
-        margin: 10px 0;
-    }
-    
-    /* Virtual Shrine Styles */
-    .virtual-shrine {
-        background: linear-gradient(var(--deep-maroon), var(--dark-orange));
-        border: 5px double var(--tibetan-gold);
-        padding: 20px;
-        margin: 20px 0;
-        text-align: center;
-    }
-    
-    .butter-lamp {
-        display: inline-block;
-        width: 50px;
-        height: 70px;
-        margin: 0 10px;
-        background: radial-gradient(
-            circle at top,
-            var(--tibetan-yellow) 0%,
-            var(--tibetan-orange) 50%,
-            transparent 100%
-        );
-        animation: flicker 0.5s infinite alternate;
-    }
-    
-    .newsletter {
-        background: var(--deep-maroon);
-        border: 2px outset var(--tibetan-gold);
-        padding: 15px;
-        margin: 20px 0;
-    }
-</style>
-
-<!-- Virtual Guestbook -->
-<div class="guestbook">
-    <center>
-        <img src="/api/placeholder/150/50" alt="Sacred Guestbook">
-        <table width="95%" cellpadding="5" bgcolor="#000000">
-            <tr>
-                <td align="center">
-                    <blink>
-                        <font color="#FFD700">༄ Share Your Path to Enlightenment ༄</font>
-                    </blink>
-                </td>
-            </tr>
-        </table>
+    <div class="container">
+        <div class="prayer-flags"></div>
         
-        <div class="guestbook-entry">
-            <font color="#40E0D0">
-                Name: </font><font color="#FFD700">CyberMonk_95</font><br>
-                <font color="#40E0D0">Date: </font><font color="#FFD700">11/03/95</font><br>
-                <font color="#40E0D0">Message: </font><font color="#FFD700">
-                Namaste! Your virtual prayer wheel gave my 486 computer enlightenment! 
-                Using Netscape 2.0 from my monastery in Pittsburgh.
-                </font>
+        <div class="welcome-banner">
+            <blink>༄ Best viewed with enlightened consciousness ༄</blink><br>
+            and Netscape Navigator 4.0 at 800x600<br>
+            Loading your karma... Please wait...
+        </div>
+
+        <h1>
+            ༄་་་ Digital Mahayana Library ་་་༄
+        </h1>
+        
+        <div class="menu">
+            [<a href="#" class="menu-item">HOME</a>]
+            [<a href="#" class="menu-item">ABOUT</a>]
+            [<a href="#" class="menu-item">CONTACT</a>]
+        </div>
+        
+        <div class="marquee">
+            <marquee scrollamount="3" behavior="alternate">
+                ☸ Gate Gate Pāragate Pārasaṃgate Bodhi Svāhā ☸
+            </marquee>
+        </div>
+        
+        <div class="navigation">
+            <div class="nav-item">
+                <a href="#">
+                    <h3>⭐️ Sutras ⭐️</h3>
+                    <div class="description">The collected discourses. Short & long texts.</div>
+                </a>
             </div>
             
-        <div class="guestbook-entry">
-            <font color="#40E0D0">
-                Name: </font><font color="#FFD700">DigitalDharma2000</font><br>
-                <font color="#40E0D0">Date: </font><font color="#FFD700">11/01/95</font><br>
-                <font color="#40E0D0">Message: </font><font color="#FFD700">
-                WOW!!! COOL MIDI SONGS!!! The Om Mani Padme Hum really 
-                works with my Sound Blaster 16! NAMASTE!!!
-                </font>
+            <div class="nav-item">
+                <a href="#">
+                    <h3>⭐️ Shastras ⭐️</h3>
+                    <div class="description">Classical treatises & philosophical works.</div>
+                </a>
+            </div>
+            
+            <div class="nav-item">
+                <a href="#">
+                    <h3>⭐️ Biographies ⭐️</h3>
+                    <div class="description">Stories of lives & past lives.</div>
+                </a>
+            </div>
+            
+            <div class="nav-item">
+                <a href="#">
+                    <h3>⭐️ Vinaya ⭐️</h3>
+                    <div class="description">The code of discipline & conduct.</div>
+                </a>
+            </div>
+            
+            <div class="nav-item">
+                <a href="#">
+                    <h3>⭐️ Commentaries ⭐️</h3>
+                    <div class="description">Traditional explanations & notes.</div>
+                </a>
+            </div>
+            
+            <div class="nav-item">
+                <a href="#">
+                    <h3>⭐️ Tantras ⭐️</h3>
+                    <div class="description">Esoteric texts & practices.</div>
+                </a>
+            </div>
         </div>
         
-        <a href="#">[Sign the Guestbook]</a> | 
-        <a href="#">[View All 108 Entries]</a>
-    </center>
-</div>
-
-<!-- Cosmic Webring -->
-<div class="webring mandala-border">
-    <font color="#FFD700" size="+1">
-        ༄ The Cyber Sangha Webring ༄
-    </font>
-    <br><br>
-    <table width="80%" align="center" cellpadding="5">
-        <tr>
-            <td align="center">
-                [Previous Site: Digital Zen Garden]
-                ※
-                [Next Site: Quantum Buddhism Homepage]
-                <br>
-                [Random Temple] ※ [Join the Ring]
-                <br><br>
-                <font size="-1">
-                    Site #108 of 216 in the Cosmic Consciousness Webring
-                </font>
-            </td>
-        </tr>
-    </table>
-</div>
-
-<!-- Virtual Shrine -->
-<div class="virtual-shrine">
-    <img src="/api/placeholder/200/200" alt="Digital Shrine">
-    <br>
-    <div class="butter-lamp"></div>
-    <div class="butter-lamp"></div>
-    <div class="butter-lamp"></div>
-    <br>
-    <table width="90%" align="center">
-        <tr>
-            <td align="center">
-                <font color="#FFD700">
-                    Click a butter lamp to make an offering<br>
-                    (1 click = 1 merit point)
-                </font>
-                <br>
-                <marquee scrollamount="2">
-                    Current Merit Total: 108,086 offerings
-                </marquee>
-            </td>
-        </tr>
-    </table>
-</div>
-
-<!-- Newsletter Signup -->
-<div class="newsletter">
-    <center>
-        <table border="1" cellpadding="5" bgcolor="#000000">
-            <tr>
-                <td align="center">
-                    <font color="#FFD700">
-                        ༄ Subscribe to Our Astral Newsletter ༄
-                    </font>
-                    <form>
-                        <input type="text" value="Enter your ethereal email">
-                        <select>
-                            <option>Choose your consciousness level</option>
-                            <option>Beginner Mind</option>
-                            <option>Intermediate Seeker</option>
-                            <option>Advanced Practitioner</option>
-                            <option>Digital Bodhisattva</option>
-                        </select>
-                        <br>
-                        <input type="checkbox"> I have read the Cosmic Terms of Service
-                        <br>
-                        <button type="submit">
-                            <blink>☸ Subscribe Now ☸</blink>
-                        </button>
-                    </form>
-                </td>
-            </tr>
-        </table>
-    </center>
-</div>
-
-<!-- Certification Badges -->
-<div class="merit-badges">
-    <center>
-        <table cellpadding="5" bgcolor="#000000">
-            <tr>
-                <td align="center">
-                    <img src="/api/placeholder/88/31" alt="Y2K Compliant">
-                    <img src="/api/placeholder/88/31" alt="Karma Verified">
-                    <img src="/api/placeholder/88/31" alt="Dharma Approved">
-                    <br>
-                    <font color="#40E0D0" size="-2">
-                        This site has been certified Y2K compliant by the 
-                        Digital Monastery Certification Board
-                    </font>
-                </td>
-            </tr>
-        </table>
-    </center>
-</div>
-  <style>
-    /* Karma Progress Bar */
-    .karma-meter {
-        width: 80%;
-        height: 20px;
-        border: 2px solid var(--tibetan-gold);
-        background: #000000;
-        margin: 10px auto;
-    }
-    
-    .karma-progress {
-        width: 75%;
-        height: 100%;
-        background: linear-gradient(
-            90deg,
-            var(--tibetan-orange),
-            var(--tibetan-gold)
-        );
-        animation: karma-pulse 2s infinite;
-    }
-    
-    /* Past Lives Counter */
-    .past-lives {
-        background: var(--deep-maroon);
-        border: 3px ridge var(--tibetan-gold);
-        padding: 15px;
-        margin: 20px 0;
-        text-align: center;
-    }
-    
-    /* Footer Styles */
-    .footer-links {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin: 20px 0;
-        padding: 10px;
-        border-top: 3px double var(--tibetan-gold);
-    }
-    
-    .meditation-timer {
-        background: #000000;
-        border: 2px outset var(--tibetan-gold);
-        padding: 10px;
-        font-family: "LCD", monospace;
-        color: var(--tibetan-turquoise);
-    }
-    
-    @keyframes karma-pulse {
-        0% { opacity: 0.8; }
-        50% { opacity: 1; }
-        100% { opacity: 0.8; }
-    }
-</style>
-
-<!-- Karma Status Section -->
-<div class="past-lives mandala-border">
-    <center>
-        <table bgcolor="#000000" width="90%" cellpadding="5">
-            <tr>
-                <td align="center">
-                    <font color="#FFD700" size="+1">
-                        ༄ Your Cosmic Status ༄
-                    </font>
-                    <br><br>
-                    <div class="karma-meter">
-                        <div class="karma-progress"></div>
-                    </div>
-                    <font color="#40E0D0" size="-1">
-                        Karma Level: Digital Bodhisattva<br>
-                        Merit Points: 108,086<br>
-                        Previous Incarnations: 1,337<br>
-                        Time Until Enlightenment: Soon™
-                    </font>
-                </td>
-            </tr>
-        </table>
-    </center>
-</div>
-
-<!-- Digital Meditation Timer -->
-<div class="meditation-timer mandala-border">
-    <center>
-        <blink>☸</blink>
-        <font color="#FFD700">Digital Meditation Timer</font>
-        <blink>☸</blink>
-        <br>
-        <table bgcolor="#000000" border="1" cellpadding="3">
-            <tr>
-                <td align="center">
-                    <font face="LCD" color="#00FF00" size="+2">
-                        88:88:88
-                    </font>
-                    <br>
-                    <select>
-                        <option>5 minutes (Beginner)</option>
-                        <option>30 minutes (Intermediate)</option>
-                        <option>4 hours (Advanced)</option>
-                        <option>∞ (Enlightened)</option>
-                    </select>
-                    <br>
-                    <font size="-2" color="#808080">
-                        *Requires RealAudio™ for gong sounds
-                    </font>
-                </td>
-            </tr>
-        </table>
-    </center>
-</div>
-
-<!-- Random Sutra Generator -->
-<div class="sutra-generator">
-    <center>
-        <table bgcolor="#000000" width="90%" cellpadding="5">
-            <tr>
-                <td align="center">
-                    <font color="#FFD700">
-                        ༄ Random Wisdom Generator ༄
-                    </font>
-                    <br>
-                    <marquee behavior="scroll" scrollamount="2">
-                        "Be the webmaster of your own mind."
-                    </marquee>
-                    <br>
-                    <input type="button" value="Generate New Wisdom">
-                    <br>
-                    <font size="-1" color="#808080">
-                        Powered by CyberDharma.js
-                    </font>
-                </td>
-            </tr>
-        </table>
-    </center>
-</div>
-
-<!-- Frames Notice -->
-<div class="frames-notice">
-    <table width="100%" cellpadding="5" bgcolor="#000000">
-        <tr>
-            <td align="center">
-                <font color="#FFD700">
-                    ༄ Viewing Options ༄
-                </font>
-                <br>
-                <a href="#">[View Frames Version]</a> |
-                <a href="#">[Low Bandwidth Version]</a> |
-                <a href="#">[Text Only]</a>
-                <br>
-                <font size="-2" color="#808080">
-                    Frames version includes floating prayer wheel and permanent mantra ticker
-                </font>
-            </td>
-        </tr>
-    </table>
-</div>
-
-<!-- The Ultimate 90s Footer -->
-<div class="footer-links">
-    <center>
-        <!-- Web Awards -->
-        <img src="/api/placeholder/88/31" alt="Cool Dharma Site Award">
-        <img src="/api/placeholder/88/31" alt="Cosmic Excellence Award">
-        <img src="/api/placeholder/88/31" alt="Digital Nirvana Award">
-        <br>
-        <!-- Classic 90s Buttons -->
-        <img src="/api/placeholder/88/31" alt="Made with Notepad">
-        <img src="/api/placeholder/88/31" alt="Get Netscape Now!">
-        <img src="/api/placeholder/88/31" alt="Best with 800x600">
-        <br>
-        <!-- Technical Badges -->
-        <img src="/api/placeholder/88/31" alt="HTML 3.2 Valid">
-        <img src="/api/placeholder/88/31" alt="Java Enabled">
-        <img src="/api/placeholder/88/31" alt="MIDI Enhanced">
-        <br>
+        <div class="badges">
+            <img src="/api/placeholder/88/31" alt="Made with Vi" />
+            <img src="/api/placeholder/88/31" alt="Netscape Now!" />
+            <img src="/api/placeholder/88/31" alt="Best with 800x600" />
+        </div>
         
-        <table border="0" cellpadding="5">
-            <tr>
-                <td align="center">
-                    <font size="-1" color="#808080">
-                        This site optimized for:<br>
-                        Netscape Navigator 4.0 | Internet Explorer 3.0 | Opera 3.21
-                        <br>
-                        Resolution: 800x600 | Colors: 16-bit | Sound: Sound Blaster 16
-                    </font>
-                </td>
-            </tr>
-        </table>
-        
-        <font size="-2" color="#FFD700">
-            ©1995-1999 Digital Temple of Cosmic Truth<br>
-            Last Updated: November 5, 1999<br>
-            <blink>Preparing for Y2K...</blink><br>
-            <marquee scrollamount="2" width="200">
-                Om Mani Padme Hum Om Mani Padme Hum Om Mani Padme Hum
-            </marquee>
-        </font>
-        
-        <table border="1" cellpadding="2" bgcolor="#000000">
-            <tr>
-                <td align="center">
-                    <font size="-2" color="#40E0D0">
-                        Made with love and enlightened intention by<br>
-                        The Digital Monks Collective<br>
-                        Server powered by positive karma
-                    </font>
-                </td>
-            </tr>
-        </table>
-        
-        <!-- Final Touch: The Email Button -->
-        <div class="email-button">
-            <a href="mailto:webmaster@digital-temple.edu">
-                <img src="/api/placeholder/88/31" alt="Email the Digital Lama">
-            </a>
+        <div class="counter">
+            ⚡ Scanning Tripitaka... ⚡
             <br>
-            <font size="-2" color="#808080">
-                (Response time depends on meditation schedule)
-            </font>
+            <div class="hit-counter">Seekers of Truth: 000,133,700</div>
+            <marquee scrollamount="2" direction="right">
+                ▂▃▅▇█▓▒░۩۞۩ Digitizing Ancient Wisdom ۩۞۩░▒▓█▇▅▃▂
+            </marquee>
+            <br>
+            <small>
+                Created with 🔥DEVOTION🔥
+                <br>
+                Best viewed in Netscape Navigator 4.0 at 800x600
+                <br>
+                Last Updated: On the Path to Enlightenment
+            </small>
         </div>
-    </center>
-</div>
-</div>
+    </div>
 </body>
 </html>
