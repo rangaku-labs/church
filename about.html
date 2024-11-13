@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>★·.·´¯`·.·★ About - Digital Mahayana Library ★·.·´¯`·.·★</title>
+    <style>
+        :root {
+            --tibetan-maroon: #800000;
+            --tibetan-gold: #FFD700;
+            --tibetan-turquoise: #40E0D0;
+            --deep-maroon: #4A0000;
+            --prayer-flag-blue: #0066CC;
+            --prayer-flag-white: #FFFFFF;
+            --prayer-flag-red: #CC0000;
+            --prayer-flag-green: #006600;
+            --prayer-flag-yellow: #FFCC00;
+        }
+
+        body {
+            background: var(--tibetan-maroon);
+            color: #ffffff;
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .prayer-flags {
+            height: 30px;
+            background: repeating-linear-gradient(
+                90deg,
+                var(--prayer-flag-blue) 0px,
+                var(--prayer-flag-blue) 100px,
+                var(--prayer-flag-white) 100px,
+                var(--prayer-flag-white) 200px,
+                var(--prayer-flag-red) 200px,
+                var(--prayer-flag-red) 300px,
+                var(--prayer-flag-green) 300px,
+                var(--prayer-flag-green) 400px,
+                var(--prayer-flag-yellow) 400px,
+                var(--prayer-flag-yellow) 500px
+            );
+            animation: wave 2s infinite linear;
+            margin-bottom: 20px;
+            border-top: 2px solid var(--tibetan-gold);
+            border-bottom: 2px solid var(--tibetan-gold);
+        }
+
+        @keyframes wave {
+            0% { background-position: 0 0; }
+            100% { background-position: 500px 0; }
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--deep-maroon);
+            padding: 20px;
+            border: 3px solid var(--tibetan-gold);
+            border-radius: 10px;
+            box-shadow: 0 0 15px var(--tibetan-gold), inset 0 0 15px var(--tibetan-gold);
+        }
+
+        .breadcrumb {
+            background: #000000;
+            padding: 5px;
+            margin-bottom: 20px;
+            color: var(--tibetan-turquoise);
+        }
+
+        .breadcrumb a {
+            color: var(--tibetan-turquoise);
+            text-decoration: none;
+        }
+
+        .section-header {
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid var(--tibetan-gold);
+            background: linear-gradient(45deg, var(--deep-maroon), var(--tibetan-maroon));
+        }
+
+        .section-header h1 {
+            color: var(--tibetan-gold);
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .text-item {
+            background: linear-gradient(45deg, var(--deep-maroon), var(--tibetan-maroon));
+            margin: 15px 0;
+            padding: 20px;
+            border: 1px solid var(--tibetan-gold);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .text-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px var(--tibetan-gold);
+        }
+
+        .section-title {
+            color: var(--tibetan-gold);
+            font-size: 20px;
+            margin-bottom: 15px;
+            text-align: center;
+            border-bottom: 1px solid var(--tibetan-gold);
+            padding-bottom: 5px;
+        }
+
+        .section-content {
+            color: #ffffff;
+            line-height: 1.8;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .dedication {
+            background: linear-gradient(45deg, var(--deep-maroon), var(--tibetan-maroon));
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid var(--tibetan-gold);
+            border-radius: 5px;
+            text-align: center;
+            color: var(--tibetan-turquoise);
+            line-height: 2;
+        }
+
+        .counter {
+            text-align: center;
+            margin-top: 20px;
+            font-family: "Courier New", Courier, monospace;
+            color: var(--tibetan-gold);
+            border: 3px double var(--tibetan-gold);
+            padding: 10px;
+            background: linear-gradient(45deg, #000000, var(--deep-maroon));
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .section-header h1 { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="prayer-flags"></div>
+        
+        <div class="breadcrumb">
+            [<a href="index.html">HOME</a>] > ABOUT
+        </div>
+
+        <div class="section-header">
+            <h1>༄་་་ About the Digital Mahayana Library ་་་༄</h1>
+        </div>
+
+        <div class="text-item">
+            <div class="section-title">Mission & Purpose</div>
+            <div class="section-content">
+                The Digital Mahayana Library exists to make Buddhist texts accessible to all seekers of wisdom. Our mission is to provide clear, readable translations of Buddhist works directly from their original languages, presented in a format that's easy to understand and free from academic complexity.
+                <br><br>
+                Whether you're a dedicated practitioner or someone newly interested in Buddhist teachings, our library is designed to be approachable and user-friendly while maintaining the authenticity and depth of these sacred texts.
+            </div>
+        </div>
+
+        <div class="text-item">
+            <div class="section-title">About Our Texts</div>
+            <div class="section-content">
+                All texts in our collection are translations from original source languages. We believe in providing direct access to these teachings without the barriers of academic complexity or specialized knowledge requirements.
+                <br><br>
+                Our entire collection is in the public domain, meaning these texts are freely available for all to read, share, and study. The translations themselves, being made directly from original sources, are also in the public domain.
+            </div>
+        </div>
+
+        <div class="text-item">
+            <div class="section-title">Translation Approach</div>
+            <div class="section-content">
+                Our texts are presented in three formats:
+                <br><br>
+                • English translation for clarity and accessibility
+                <br>
+                • Sanskrit transliteration for traditional reference
+                <br>
+                • Devanagari script for connection to the source
+                <br><br>
+                Each translation aims to balance accuracy with readability, making these profound teachings accessible while maintaining their authentic meaning.
+            </div>
+        </div>
+
+        <div class="dedication">
+            ༄་་་ Dedication of Merit ་་་༄
+            <br><br>
+            May the merit generated from making these teachings available
+            <br>
+            Benefit all beings throughout space and time
+            <br>
+            May all who encounter these texts
+            <br>
+            Find their way to complete awakening
+            <br><br>
+            ༄་་་
+        </div>
+
+        <div class="text-item">
+            <div class="section-title">Acknowledgments</div>
+            <div class="section-content">
+                We bow in gratitude to:
+                <br><br>
+                • All the lineage masters who preserved these teachings
+                <br>
+                • The original scribes and translators
+                <br>
+                • All who maintain and share the Dharma
+                <br><br>
+                Special thanks to the Digital Dharma Cloud Monastery's server hamsters, who keep our virtual wheels turning at 108 RPM.
+            </div>
+        </div>
+        
+        <div class="counter">
+            ⚡ Processing Karma... ⚡
+            <br>
+            <div class="hit-counter">Visitors: 000,108</div>
+            <marquee scrollamount="2" direction="right">
+                ▂▃▅▇█▓▒░۩۞۩ Om Mani Padme Hum ۩۞۩░▒▓█▇▅▃▂
+            </marquee>
+            <br>
+            <div class="badges">
+                <img src="/api/placeholder/88/31" alt="Best viewed with Enlightened Mind">
+                <img src="/api/placeholder/88/31" alt="Netscape Now!">
+                <img src="/api/placeholder/88/31" alt="Made with Vi">
+            </div>
+            <br>
+            <small>
+                Optimized for: Inner Peace 1.0
+                <br>
+                Resolution: 800x600 • Colors: 16-bit • Consciousness: Infinite
+                <br>
+                Best viewed in Netscape Navigator 4.0 at 800x600
+            </small>
+        </div>
+    </div>
+</body>
+</html>
