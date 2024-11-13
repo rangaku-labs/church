@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>★·.·´¯`·.·★ Contact the Digital Sangha ★·.·´¯`·.·★</title>
+    <style>
+        :root {
+            --tibetan-maroon: #800000;
+            --tibetan-gold: #FFD700;
+            --tibetan-turquoise: #40E0D0;
+            --deep-maroon: #4A0000;
+            --prayer-flag-blue: #0066CC;
+            --prayer-flag-white: #FFFFFF;
+            --prayer-flag-red: #CC0000;
+            --prayer-flag-green: #006600;
+            --prayer-flag-yellow: #FFCC00;
+        }
+
+        body {
+            background: var(--tibetan-maroon);
+            color: #ffffff;
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .prayer-flags {
+            height: 30px;
+            background: repeating-linear-gradient(
+                90deg,
+                var(--prayer-flag-blue) 0px,
+                var(--prayer-flag-blue) 100px,
+                var(--prayer-flag-white) 100px,
+                var(--prayer-flag-white) 200px,
+                var(--prayer-flag-red) 200px,
+                var(--prayer-flag-red) 300px,
+                var(--prayer-flag-green) 300px,
+                var(--prayer-flag-green) 400px,
+                var(--prayer-flag-yellow) 400px,
+                var(--prayer-flag-yellow) 500px
+            );
+            animation: wave 2s infinite linear;
+            margin-bottom: 20px;
+            border-top: 2px solid var(--tibetan-gold);
+            border-bottom: 2px solid var(--tibetan-gold);
+        }
+
+        @keyframes wave {
+            0% { background-position: 0 0; }
+            100% { background-position: 500px 0; }
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--deep-maroon);
+            padding: 20px;
+            border: 3px solid var(--tibetan-gold);
+            border-radius: 10px;
+            box-shadow: 0 0 15px var(--tibetan-gold), inset 0 0 15px var(--tibetan-gold);
+        }
+
+        .breadcrumb {
+            background: #000000;
+            padding: 5px;
+            margin-bottom: 20px;
+            color: var(--tibetan-turquoise);
+        }
+
+        .breadcrumb a {
+            color: var(--tibetan-turquoise);
+            text-decoration: none;
+        }
+
+        .section-header {
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid var(--tibetan-gold);
+            background: linear-gradient(45deg, var(--deep-maroon), var(--tibetan-maroon));
+        }
+
+        .section-header h1 {
+            color: var(--tibetan-gold);
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .text-item {
+            background: linear-gradient(45deg, var(--deep-maroon), var(--tibetan-maroon));
+            margin: 15px 0;
+            padding: 20px;
+            border: 1px solid var(--tibetan-gold);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .text-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px var(--tibetan-gold);
+        }
+
+        .section-title {
+            color: var(--tibetan-gold);
+            font-size: 20px;
+            margin-bottom: 15px;
+            text-align: center;
+            border-bottom: 1px solid var(--tibetan-gold);
+            padding-bottom: 5px;
+        }
+
+        .section-content {
+            color: #ffffff;
+            line-height: 1.8;
+            margin: 0;
+            padding: 10px;
+        }
+
+        .construction-zone {
+            text-align: center;
+            padding: 10px;
+            background: repeating-linear-gradient(
+                45deg,
+                var(--deep-maroon),
+                var(--deep-maroon) 10px,
+                var(--tibetan-maroon) 10px,
+                var(--tibetan-maroon) 20px
+            );
+            border: 2px dashed var(--tibetan-gold);
+            margin: 20px 0;
+            color: var(--tibetan-gold);
+        }
+
+        .blink {
+            animation: blink 1s steps(1, end) infinite;
+        }
+
+        .guestbook-form {
+            background: #000000;
+            padding: 10px;
+            border: 1px solid var(--tibetan-gold);
+            margin: 10px;
+        }
+
+        .guestbook-form input,
+        .guestbook-form select,
+        .guestbook-form textarea {
+            background: var(--deep-maroon);
+            border: 1px solid var(--tibetan-turquoise);
+            color: var(--tibetan-gold);
+            margin: 5px;
+            padding: 3px;
+        }
+
+        .highlight {
+            color: var(--tibetan-turquoise);
+        }
+
+        .counter {
+            text-align: center;
+            margin-top: 20px;
+            font-family: "Courier New", Courier, monospace;
+            color: var(--tibetan-gold);
+            border: 3px double var(--tibetan-gold);
+            padding: 10px;
+            background: linear-gradient(45deg, #000000, var(--deep-maroon));
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .section-header h1 { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="prayer-flags"></div>
+        
+        <div class="breadcrumb">
+            [<a href="index.html">HOME</a>] > CONTACT
+        </div>
+
+        <div class="section-header">
+            <h1>༄་་་ Contact the Digital Sangha ་་་༄</h1>
+        </div>
+
+        <div class="construction-zone">
+            <blink>🚧 Merit System Under Construction 🚧</blink>
+            <br>
+            Our digital monks are currently in retreat
+            <br>
+            <small>(Expected return: Next kalpa)</small>
+        </div>
+
+        <div class="text-item">
+            <div class="section-title">Ways to Reach Us</div>
+            <div class="section-content">
+                <span class="highlight">• Astral Email:</span> webmaster@void.nirvana
+                <br>
+                <span class="highlight">• Dharma Phone:</span> 1-800-OM-MANI
+                <br>
+                <span class="highlight">• Psychic Hotline:</span> Just think really hard about us
+                <br>
+                <span class="highlight">• Physical Address:</span> Somewhere in Cyberspace, The Pure Land
+                <br>
+                <span class="highlight">• IRC:</span> #enlightenment_help (response time: instant + 3 kalpas)
+            </div>
+        </div>
+
+        <div class="text-item">
+            <div class="section-title">Digital Meditation Room</div>
+            <div class="section-content" style="text-align: center;">
+                Current Status: <blink class="highlight">Contemplating Emptiness</blink>
+                <br><br>
+                Users in meditation: <span class="highlight">∞</span>
+                <br>
+                Average ping to nirvana: <span class="highlight">84000ms</span>
+                <br>
+                Server consciousness level: <span class="highlight">ELEVATED</span>
+            </div>
+        </div>
+
+        <div class="text-item">
+            <div class="section-title">Virtual Guestbook</div>
+            <div class="section-content">
+                <div class="guestbook-form">
+                    <table width="100%" cellpadding="5">
+                        <tr>
+                            <td>Name:</td>
+                            <td><input type="text" value="Cyber Bodhisattva" disabled></td>
+                        </tr>
+                        <tr>
+                            <td>Realm:</td>
+                            <td>
+                                <select disabled>
+                                    <option>Human Realm</option>
+                                    <option>Deva Realm</option>
+                                    <option>Pure Land</option>
+                                    <option selected>Internet</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Message:</td>
+                            <td><textarea disabled>404 Attachment Not Found</textarea></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" align="center">
+                                <button disabled>📝 Sign the Void</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-item">
+            <div class="section-title">Tech Support Koans</div>
+            <div class="section-content">
+                <span class="highlight">Q:</span> What is the sound of one server crashing?
+                <br>
+                <span class="highlight">A:</span> sudo rm -rf attachment/*
+                <br><br>
+                <span class="highlight">Q:</span> If a website loads in cyberspace and no one is online to see it, does it generate merit?
+                <br>
+                <span class="highlight">A:</span> Error 200: Enlightenment OK
+            </div>
+        </div>
+
+        <div class="text-item">
+            <div class="section-title">Connection Status</div>
+            <div class="section-content" style="text-align: center;">
+                <img src="/api/placeholder/88/31" alt="ICQ: Infinite Cosmic Questions">
+                <img src="/api/placeholder/88/31" alt="AIM: Absolute Inner Mindfulness">
+                <br>
+                Current Modem Speed: <span class="highlight">108 Baud</span>
+                <br>
+                Spiritual Bandwidth: <span class="highlight">Unlimited</span>
+                <br>
+                <blink class="highlight">Downloading Enlightenment... 84%</blink>
+            </div>
+        </div>
+        
+        <div class="counter">
+            ⚡ Scanning Mindstreams... ⚡
+            <br>
+            <div class="hit-counter">Failed Contact Attempts: 404</div>
+            <marquee scrollamount="2" direction="right">
+                ▂▃▅▇█▓▒░۩۞۩ Please Try Non-Trying ۩۞۩░▒▓█▇▅▃▂
+            </marquee>
+            <br>
+            <small>
+                Last Updated: In a previous life
+                <br>
+                Best viewed in Non-Dual Awareness 4.0
+                <br>
+                <marquee>🕉️ Now serving customer #∞ 🕉️</marquee>
+            </small>
+        </div>
+    </div>
+</body>
+</html>
