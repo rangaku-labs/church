@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>★·.·´¯`·.·★ Digital Mahayana Library - The Lotus Sutra ★·.·´¯`·.·★</title>
+    <style>
+        :root {
+            --tibetan-maroon: #800000;
+            --tibetan-gold: #FFD700;
+            --tibetan-turquoise: #40E0D0;
+            --deep-maroon: #4A0000;
+            --prayer-flag-blue: #0066CC;
+            --prayer-flag-white: #FFFFFF;
+            --prayer-flag-red: #CC0000;
+            --prayer-flag-green: #006600;
+            --prayer-flag-yellow: #FFCC00;
+        }
+
+        body {
+            background: var(--tibetan-maroon);
+            color: #ffffff;
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--deep-maroon);
+            padding: 20px;
+            border: 3px solid var(--tibetan-gold);
+            border-radius: 10px;
+            box-shadow: 0 0 15px var(--tibetan-gold), inset 0 0 15px var(--tibetan-gold);
+        }
+
+        .breadcrumb {
+            background: #000000;
+            padding: 5px;
+            margin-bottom: 20px;
+            color: var(--tibetan-turquoise);
+        }
+
+        .breadcrumb a {
+            color: var(--tibetan-turquoise);
+            text-decoration: none;
+        }
+
+        .text-title {
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid var(--tibetan-gold);
+            background: linear-gradient(45deg, var(--deep-maroon), var(--tibetan-maroon));
+        }
+
+        .text-title h1 {
+            color: var(--tibetan-gold);
+            margin: 0 0 10px 0;
+            font-size: 24px;
+        }
+
+        .text-title h2 {
+            color: var(--tibetan-turquoise);
+            margin: 5px 0;
+            font-size: 20px;
+        }
+
+        .text-title h3 {
+            color: #ffffff;
+            margin: 5px 0;
+            font-size: 18px;
+        }
+
+        .table-of-contents {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--tibetan-gold);
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .table-of-contents h2 {
+            color: var(--tibetan-gold);
+            margin: 0 0 10px;
+            text-align: center;
+        }
+
+        .table-of-contents ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .table-of-contents li {
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .table-of-contents a {
+            color: var(--tibetan-turquoise);
+            text-decoration: none;
+        }
+
+        .table-of-contents a:hover {
+            color: var(--tibetan-gold);
+            text-decoration: underline;
+        }
+
+        .chapter-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--tibetan-gold);
+            border-radius: 5px;
+        }
+
+        .chapter-title {
+            color: var(--tibetan-turquoise);
+            font-size: 18px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--tibetan-gold);
+            text-align: center;
+        }
+
+        .text-content {
+            white-space: pre-wrap;
+            padding: 10px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .counter {
+            text-align: center;
+            margin-top: 20px;
+            font-family: "Courier New", Courier, monospace;
+            color: var(--tibetan-gold);
+            border: 3px double var(--tibetan-gold);
+            padding: 10px;
+            background: linear-gradient(45deg, #000000, var(--deep-maroon));
+        }
+
+        .language-toggle {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .language-toggle a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 5px 15px;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--tibetan-gold);
+            color: var(--tibetan-turquoise);
+            text-decoration: none;
+            border-radius: 3px;
+        }
+
+        .language-toggle a:hover {
+            background: var(--tibetan-gold);
+            color: var(--deep-maroon);
+        }
+
+        .toc-toggle {
+            display: block;
+            margin: 0 auto 10px auto;
+            padding: 3px 10px;
+            background: var(--deep-maroon);
+            border: 1px solid var(--tibetan-gold);
+            color: var(--tibetan-turquoise);
+            cursor: pointer;
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        .toc-toggle:hover {
+            background: var(--tibetan-gold);
+            color: var(--deep-maroon);
+        }
+
+        .toc-content {
+            max-height: 500px;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .toc-content.collapsed {
+            max-height: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            [<a href="index.html">HOME</a>] > [<a href="sutras.html">SUTRAS</a>] > LOTUS SUTRA
+        </div>
+
+        <div class="text-title">
+            <h1>The Lotus Sutra</h1>
+            <h2>Saddharma Puṇḍarīka Sūtra</h2>
+            <h3>सद्धर्मपुण्डरीक सूत्र</h3>
+        </div>
+
+        <div class="language-toggle">
+            <a href="lotus-sutra-english.html">English</a>
+            <a href="lotus-sutra-sanskrit.html">Sanskrit</a>
+            <a href="lotus-sutra-devanagari.html">देवनागरी</a>
+        </div>
+
+        <div class="table-of-contents" id="toc">
+            <h2>॥ Table of Contents ॥</h2>
+            <button onclick="toggleTOC()" class="toc-toggle">[-] Minimize</button>
+            <ul>
+                <li><a href="#chapter1">Chapter 1: Introduction (Nidāna Parivarta)</a></li>
+                <li><a href="#chapter2">Chapter 2: Skillful Means (Upāyakauśalya Parivarta)</a></li>
+                <li><a href="#chapter3">Chapter 3: The Parable (Aupamya Parivarta)</a></li>
+                <!-- Add more chapters as needed -->
+            </ul>
+        </div>
+
+        <div class="chapter-section" id="chapter1">
+            <div class="chapter-title">
+                ॥ Chapter 1: Introduction (Nidāna Parivarta) ॥
+            </div>
+            <div class="text-content">
+"Mañjuśrī asked, 'What is the meaning of this light that streams forth from between the eyebrows of our Guide? This single ray illuminates everything in its path. (1)
+
+The delighted gods are showering the earth with magnificent mandara flowers, mixed with precious sandalwood powder - heavenly fragrances that fill the heart with joy. (2)
+
+The whole earth has become radiant, and all four assemblies are filled with happiness. This entire realm trembles in six different ways, an awesome sight to behold. (3)
+
+That same light beam stretches eastward, lighting up eighteen thousand worlds in a single moment. All these realms shine as if painted in gold. (4)
+
+From the deepest hell realms to the highest heaven, in all these worlds, countless beings can be seen. Some are leaving one life, some are entering another, moving through the six realms of existence. (5)
+
+I can see their varied actions playing out - moments of joy and sorrow, experiences high and low and everything in between. From where I stand, all of this is clear to me. (6)
+
+I see the Buddhas, those lions among people, teaching the Dharma with clarity, guiding countless millions of beings with voices gentle as honey. (7)
+
+In each of their own realms, they speak with deep, magnificent, and wondrous tones. Using countless examples and reasons, they reveal the Buddha's teachings. (8)
+
+To those beings trapped in suffering, worn down by birth and aging, not understanding their situation, they show the path to peaceful freedom, saying: 'Here, friends, is the end of suffering.' (9)
+
+And to those of great strength and determination, those who have gathered merit and seen Buddhas before, they teach the path of individual awakening, explaining this aspect of the Dharma.' (10)"
+
+"And there are other children of the Buddha who are searching for the highest wisdom. Whatever practices they engage in, the Buddhas praise these too as paths to awakening. (11)
+
+Gentle-Voiced One, I hear and see all of this as I stand here. There are thousands upon thousands of other wonders too - I'll describe just a small portion of what I've witnessed. (12)
+
+In countless realms, I see bodhisattvas as numerous as the sands of the Ganges. These millions upon millions are awakening through all different kinds of dedicated practice. (13)
+
+Some give gifts of wealth - gold, silver, and precious metals. Others offer pearls, gems, shells, crystals, and coral. Still others give servants, horses, and carriages. (14)
+
+With joyful hearts, they offer jewel-adorned palanquins, dedicating all of this toward supreme awakening, thinking: 'May we too attain this greatest of vehicles!' (15)
+
+The Buddha's path is the most excellent vehicle in all three realms of existence, praised by all the Awakened Ones. Those giving such gifts think: 'May I too quickly gain this vehicle!' (16)
+
+Some offer chariots drawn by four horses, decorated with banners of flowers and precious stones, complete with railings and victory pennants. (17)
+
+Others give away their sons and daughters, and some even offer their own flesh. When asked, some give their hands and feet - all in their search for this supreme awakening. (18)
+
+Some offer their heads, others their eyes, and some give their entire bodies. Having made these offerings with clear and peaceful minds, they aspire to gain the wisdom of the Awakened Ones. (19)
+
+Mañjuśrī, I see some who have given up prosperous kingdoms, their royal courts, their territories - leaving behind all their ministers and relatives. (20)"
+
+"They approach the Guides of the World, asking about the highest teachings that lead to peace. They put on the saffron robes and shave their heads and beards. (21)
+
+I see some bodhisattvas living as monks in the forests, dwelling in empty wilderness places. Some devote themselves entirely to studying and reciting the teachings. (22)
+
+I see other bodhisattvas, steady in their resolve, who enter mountain caves. There they contemplate and gain insight into the Buddha's wisdom through deep meditation. (23)
+
+Others have completely let go of worldly pleasures, purifying themselves through noble conduct. These children of the Buddha live in the wilderness, having mastered the five spiritual powers. (24)
+
+Some wise ones stand perfectly still, hands joined in respect before their Teachers. With hearts full of joy, they praise these Supreme Victors with thousands of verses. (25)
+
+Some are mindful, gentle, and confident in their understanding of the subtlest practices. They ask questions about the teachings from these Greatest of Beings, and having heard, they become keepers of the Dharma. (26)
+
+Here and there, I see these children of the Supreme Victor, their minds well-trained, teaching the Dharma to millions of beings, using countless examples and explanations. (27)
+
+They teach with joy, encouraging many bodhisattvas, beating the drum of Dharma after defeating Mara along with all his armies and vehicles. (28)
+
+I see some who are honored by humans, gods, spirits, and celestial beings, yet these children of the Buddha remain humble, unmoved by praise, walking the path of peace with quiet dignity. (29)
+
+Others dwell in different forest groves, radiating light from their bodies, reaching out to rescue beings from the hell realms and inspiring them toward awakening. (30)"
+
+"Some children of the Victor remain vigilant, completely abandoning sleep. They practice walking meditation in the forest - through their energy, they advance toward supreme awakening. (31)
+
+Others protect their pure moral conduct like a flawless jewel, their practice complete and perfect. Through their ethical behavior, they move toward highest awakening. (32)
+
+Some children of the Victor are strong in patience. When monks full of pride insult, abuse, or threaten them, they respond with acceptance. Through patience, they progress toward supreme awakening. (33)
+
+I see some bodhisattvas who have given up all idle entertainment and left behind foolish companions. Instead, they find joy in the company of the wise, keeping their minds focused. (34)
+
+Avoiding scattered thoughts, they maintain one-pointed concentration in mountain caves. They meditate for millions of years - through this deep meditation, they advance toward supreme awakening. (35)
+
+Some make offerings to the Victorious Ones and their communities of disciples. They give food and drink of all kinds, and plenty of medicine for the sick. (36)
+
+Some offer hundreds of millions of garments, worth countless treasures, while others give priceless robes to the Victors and their communities of disciples. (37)
+
+Some build millions of monasteries made of precious gems and sandalwood, beautifully furnished with many beds and seats, offering them in the presence of the Well-Gone Ones. (38)
+
+Others offer delightful pleasure gardens filled with various fruits and colorful flowers, as places for the Bull-like Teachers and their disciples to rest during the day. (39)
+
+They make these various wonderful offerings with hearts full of joy. Having given these gifts, they generate energy for awakening - through generosity, they advance toward supreme awakening. (40)"
+
+"Some teach the peaceful Dharma using countless examples and explanations. They share these teachings with millions of beings - through wisdom, they advance toward supreme awakening. (41)
+
+Free from striving, they understand the Dharma's true nature. Moving like birds through the sky, these children of the Buddha remain unstained by worldly concerns. Through insight, they advance toward supreme awakening. (42)
+
+And Gentle-Voiced One, I see even more: when the Well-Gone Ones pass into final peace, many wise bodhisattvas arise who honor the relics of these Victorious Ones. (43)
+
+I see millions upon millions of stupas, countless as the sands of the Ganges, beautifying millions of realms - all built by these children of the Victor. (44)
+
+These stupas, made of seven precious substances, rise five thousand leagues high and extend two thousand leagues across, crowned with millions of parasols and banners. (45)
+
+They shine brilliantly with victory pennants, always resonating with the sound of countless bells, honored with flowers, incense, and music by humans, gods, spirits, and celestial beings. (46)
+
+The children of the Buddha create such offerings for the Victors' relics, making all ten directions as radiant as a forest of fully blooming coral trees. (47)
+
+Standing here, I and millions of other beings see all of this - this entire world with its gods blooming like a garden, all from this single ray of light released by the Victor. (48)
+
+Oh, how wonderful is the power of this Greatest of Beings! How vast and pure is this wisdom, that a single ray of light sent forth today reveals thousands of realms! (49)
+
+We are filled with wonder at seeing such amazing and immeasurable signs. Gentle-Voiced One, please explain their meaning - O Child of the Buddha, please satisfy our curiosity! (50)"
+
+"The true children of the Well-Gone One could be seen, unmoved and unshaken, established in patience, absorbed in meditation, at peace. Through their deep practice, they advance toward supreme awakening. (71)
+
+Understanding the true state - peaceful and free from all afflictions - they illuminate the way for others. They teach the Dharma throughout countless realms - all this made possible by the power of the Well-Gone One. (72)
+
+Seeing this power of the One who Illuminates like the Sun and Moon, all four assemblies were filled with joy in that moment, asking one another, 'How can this be?' (73)
+
+After a short while, this Guide of the World, honored by humans, gods, and spirits, emerged from his meditation. He addressed his noble son, the wise Teacher of Dharma, Varaprabha. (74)
+
+'You are the eye and the path for the world, my trusted keeper of the teaching. You are witness to my treasury of Dharma, as I will now speak for the benefit of all beings.' (75)
+
+Having established many bodhisattvas, having delighted them, praised them, and encouraged them, he then taught the highest Dharma of the Victor for sixty intermediate eons. (76)
+
+Everything that the Protector of the World taught while seated on that single seat - all of it was preserved by that child of the Victor, Varaprabha, the Teacher of Dharma. (77)
+
+After the Victor had taught this highest Dharma, bringing joy to countless beings, on that very day the Guide spoke before the entire world, including the gods: (78)
+
+'I have illuminated this eye of Dharma, explained the true nature of things as it is. Now, monks, the time of my final peace approaches - it will be in the middle watch of this night. (79)
+
+Be diligent, firm in your dedication! Apply yourselves to my teaching! For Victorious Ones, great sages like this, are extremely rare - they appear only after countless millions of eons.' (80)"
+
+"Many children of the Buddha were overcome with grief, struck by intense sorrow when they heard the Greatest of Beings speak that word - 'nirvana' - coming all too soon. (81)
+
+But the King of Humans reassured these countless millions of beings: 'Don't be afraid, monks. After I pass into peace, you will have another Buddha. (82)
+
+This wise bodhisattva Śrīgarbha, who has reached the state of pure wisdom, will touch supreme awakening and become a Victor named Vimalāgranetra (Pure Supreme Eye).' (83)
+
+In the middle watch of that very night, he passed into final peace, like a lamp going out when its fuel is spent. His relics were distributed widely, and countless millions of stupas were built. (84)
+
+The monks and nuns there who had set out for supreme awakening were countless as the sands of the Ganges, all dedicated to the Well-Gone One's teaching. (85)
+
+And that Teacher of Dharma, Varaprabha, who had preserved these teachings - for eighty full eons, he taught the highest Dharma in that dispensation. (86)
+
+He had eight hundred disciples whom he had guided to maturity. They saw many millions of Buddhas and paid honor to these great sages. (87)
+
+Having practiced the harmonious path, they became Buddhas in many realms. One after another, they prophesied each other's supreme awakening. (88)
+
+In the lineage of these Buddhas, Dīpankara was the last - a god above gods, honored by hosts of sages, who guided millions of beings. (89)
+
+And there was one who was a disciple of Varaprabha when he taught the Dharma - one who was lazy and scattered, seeking only knowledge and gain. (90)"
+
+"He was excessively concerned with fame, wandering from family to family. Though he studied and recited the teachings, none of it truly settled in his mind at that time. (91)
+
+This was his name, known throughout the directions as 'Seeker of Fame.' Yet even through those unskillful actions, through that mixed karma he created, (92)
+
+He still managed to please millions of Buddhas and make vast offerings to them. He practiced the noble harmonious path, and now he has met the Buddha, the Lion of the Śākyas. (93)
+
+And this one will be the next to gain supreme awakening. He will become the Blessed One of the Maitreya clan, who will guide millions of beings. (94)
+
+'That lazy one who lived during the teaching of the Well-Gone One after he had passed into peace - that was you. And I was the Teacher of Dharma then.' (95)
+
+'For this reason, today when I saw these signs - signs of that same wisdom - I recognized them as the same ones I first saw back then. (96)
+
+Surely the Victor-King, the All-Seeing One, the King of the Śākyas who perceives ultimate truth, wishes to teach that very same highest teaching that I heard then. (97)
+
+These signs are now complete - the Śākya Lion is establishing his skillful means as a Guide. He will teach the seal of the true nature of reality. (98)
+
+Be attentive, pure-minded, with joined palms, for the Compassionate One who benefits the world will speak. He will rain down endless Dharma rain, satisfying those who are set on awakening. (99)
+
+And for those here who have any doubts, any uncertainties or questions, these will all be cleared away for the wise children, these bodhisattvas who are set on awakening.' (100)"
+
+            </div>
+        </div>
+
+        <div class="chapter-section" id="chapter2">
+            <div class="chapter-title">
+                ॥ Chapter 2:  Skillful Means (Upāyakauśalya Parivarta) ॥
+            </div>
+            <div class="text-content">
+whats up youtube gaming
+            </div>
+        </div>
+
+        <!-- Additional chapter sections would follow the same pattern -->
+
+        <div class="counter">
+            ⚡ Preserving Wisdom... ⚡
+            <br>
+            <div class="hit-counter">Sutra Viewings: 000,108</div>
+            <marquee scrollamount="2" direction="right">
+                ▂▃▅▇█▓▒░۩۞۩ Digital Dharma ۩۞۩░▒▓█▇▅▃▂
+            </marquee>
+            <br>
+            <small>
+                Last Updated: During the Waxing Moon
+                <br>
+                Best viewed in Netscape Navigator 4.0 at 800x600
+            </small>
+        </div>
+    </div>
+
+<script>
+function toggleTOC() {
+    var tocContent = document.querySelector('.table-of-contents ul');
+    var toggleButton = document.querySelector('.toc-toggle');
+    
+    if (tocContent.style.display === 'none') {
+        tocContent.style.display = 'block';
+        toggleButton.innerHTML = '[-] Minimize';
+    } else {
+        tocContent.style.display = 'none';
+        toggleButton.innerHTML = '[+] Expand';
+    }
+}
+</script>
+</body>
+</html>
