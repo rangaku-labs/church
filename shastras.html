@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>★·.·´¯`·.·★ Shastras - Digital Mahayana Library ★·.·´¯`·.·★</title>
+    <style>
+        :root {
+            --tibetan-maroon: #800000;
+            --tibetan-gold: #FFD700;
+            --tibetan-turquoise: #40E0D0;
+            --deep-maroon: #4A0000;
+            --prayer-flag-blue: #0066CC;
+            --prayer-flag-white: #FFFFFF;
+            --prayer-flag-red: #CC0000;
+            --prayer-flag-green: #006600;
+            --prayer-flag-yellow: #FFCC00;
+        }
+
+        body {
+            background: var(--tibetan-maroon);
+            color: #ffffff;
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .prayer-flags {
+            height: 30px;
+            background: repeating-linear-gradient(
+                90deg,
+                var(--prayer-flag-blue) 0px,
+                var(--prayer-flag-blue) 100px,
+                var(--prayer-flag-white) 100px,
+                var(--prayer-flag-white) 200px,
+                var(--prayer-flag-red) 200px,
+                var(--prayer-flag-red) 300px,
+                var(--prayer-flag-green) 300px,
+                var(--prayer-flag-green) 400px,
+                var(--prayer-flag-yellow) 400px,
+                var(--prayer-flag-yellow) 500px
+            );
+            animation: wave 2s infinite linear;
+            margin-bottom: 20px;
+            border-top: 2px solid var(--tibetan-gold);
+            border-bottom: 2px solid var(--tibetan-gold);
+        }
+
+        @keyframes wave {
+            0% { background-position: 0 0; }
+            100% { background-position: 500px 0; }
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--deep-maroon);
+            padding: 20px;
+            border: 3px solid var(--tibetan-gold);
+            border-radius: 10px;
+            box-shadow: 0 0 15px var(--tibetan-gold), inset 0 0 15px var(--tibetan-gold);
+        }
+
+        .breadcrumb {
+            background: #000000;
+            padding: 5px;
+            margin-bottom: 20px;
+            color: var(--tibetan-turquoise);
+        }
+
+        .breadcrumb a {
+            color: var(--tibetan-turquoise);
+            text-decoration: none;
+        }
+
+        .section-header {
+            background: var(--tibetan-maroon);
+            color: var(--tibetan-gold);
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid var(--tibetan-gold);
+        }
+        
+        .section-header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .section-header .tibetan {
+            color: #ffffff;
+            margin-top: 10px;
+        }
+
+        .text-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .text-item {
+            background: linear-gradient(45deg, var(--deep-maroon), var(--tibetan-maroon));
+            margin: 15px 0;
+            padding: 20px;
+            border: 1px solid var(--tibetan-gold);
+            border-radius: 5px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .text-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 20px var(--tibetan-gold);
+        }
+
+        .text-item a {
+            color: var(--tibetan-gold);
+            text-decoration: none;
+            display: block;
+        }
+
+        .text-name {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .text-sanskrit {
+            color: var(--tibetan-turquoise);
+            margin: 5px 0;
+        }
+
+        .text-devanagari {
+            color: #ffffff;
+            margin: 5px 0;
+        }
+
+        .guidance-section {
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+            background: linear-gradient(45deg, var(--deep-maroon), var(--tibetan-maroon));
+            border: 2px solid var(--tibetan-gold);
+            color: var(--tibetan-turquoise);
+        }
+
+        .guidance-section .tibetan {
+            color: var(--tibetan-gold);
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .counter {
+            text-align: center;
+            margin-top: 20px;
+            font-family: "Courier New", Courier, monospace;
+            color: var(--tibetan-gold);
+            border: 3px double var(--tibetan-gold);
+            padding: 10px;
+            background: linear-gradient(45deg, #000000, var(--deep-maroon));
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .section-header h1 { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="prayer-flags"></div>
+        
+        <div class="breadcrumb">
+            [<a href="index.html">HOME</a>] > SHASTRAS
+        </div>
+
+        <div class="section-header">
+            <h1>⟪ Shastric Texts ⟫</h1>
+            <div class="tibetan">ཤེས་རབ་མཛོད་བསྟན་ཡོངས་བརྒྱུད།</div>
+        </div>
+
+        <ul class="text-list">
+            <li class="text-item">
+                <a href="thirty_six_sacred_praises_of_maitreya.html">
+                    <div class="text-name">The Thirty-Six Sacred Praises of Maitreya</div>
+                    <div class="text-sanskrit">ṢaṭtriṃśatMaitreyastutiḥ</div>
+                    <div class="text-devanagari">षट्त्रिंशत्मैत्रेयस्तुतिः</div>
+                </a>
+            </li>
+
+            <li class="text-item">
+                <a href="#">
+                    <div class="text-name">The Srivajramandalalamkara Shastra</div>
+                    <div class="text-sanskrit">Śrīvajramaṇḍālālaṃkāra</div>
+                    <div class="text-devanagari">श्रीवज्रमण्डलालंकार</div>
+                </a>
+            </li>
+
+            <li class="text-item">
+                <a href="#">
+                    <div class="text-name">The Mahayana Sadhana</div>
+                    <div class="text-sanskrit">Mahayāna Sādhana</div>
+                    <div class="text-devanagari">महायान साधन</div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="guidance-section">
+            <div class="tibetan">༄</div>
+            These texts are presented under the guidance of<br>
+            The Digital Dharma Cloud Monastery<br>
+            Located in Cyberspace at 127.0.0.1<br>
+            <div class="tibetan">༄</div>
+        </div>
+        <div class="counter">
+            ⚡ Scanning Shastras... ⚡
+            <br>
+            <div class="hit-counter">Visitors: 000,108</div>
+            <marquee scrollamount="2" direction="right">
+                ▂▃▅▇█▓▒░۩۞۩ Preserving Sacred Wisdom ۩۞۩░▒▓█▇▅▃▂
+            </marquee>
+            <br>
+            <small>
+                Last Updated: During the Waxing Moon
+                <br>
+                Best viewed in Netscape Navigator 4.0 at 800x600
+            </small>
+        </div>

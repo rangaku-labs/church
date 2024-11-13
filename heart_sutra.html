@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>★·.·´¯`·.·★ Digital Mahayana Library - Text Display ★·.·´¯`·.·★</title>
+    <style>
+        :root {
+            --tibetan-maroon: #800000;
+            --tibetan-gold: #FFD700;
+            --tibetan-turquoise: #40E0D0;
+            --deep-maroon: #4A0000;
+            --prayer-flag-blue: #0066CC;
+            --prayer-flag-white: #FFFFFF;
+            --prayer-flag-red: #CC0000;
+            --prayer-flag-green: #006600;
+            --prayer-flag-yellow: #FFCC00;
+        }
+
+        body {
+            background: var(--tibetan-maroon);
+            color: #ffffff;
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .prayer-flags {
+            height: 30px;
+            background: repeating-linear-gradient(
+                90deg,
+                var(--prayer-flag-blue) 0px,
+                var(--prayer-flag-blue) 100px,
+                var(--prayer-flag-white) 100px,
+                var(--prayer-flag-white) 200px,
+                var(--prayer-flag-red) 200px,
+                var(--prayer-flag-red) 300px,
+                var(--prayer-flag-green) 300px,
+                var(--prayer-flag-green) 400px,
+                var(--prayer-flag-yellow) 400px,
+                var(--prayer-flag-yellow) 500px
+            );
+            animation: wave 2s infinite linear;
+            margin-bottom: 20px;
+            border-top: 2px solid var(--tibetan-gold);
+            border-bottom: 2px solid var(--tibetan-gold);
+        }
+
+        @keyframes wave {
+            0% { background-position: 0 0; }
+            100% { background-position: 500px 0; }
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--deep-maroon);
+            padding: 20px;
+            border: 3px solid var(--tibetan-gold);
+            border-radius: 10px;
+            box-shadow: 0 0 15px var(--tibetan-gold), inset 0 0 15px var(--tibetan-gold);
+        }
+
+        .breadcrumb {
+            background: #000000;
+            padding: 5px;
+            margin-bottom: 20px;
+            color: var(--tibetan-turquoise);
+        }
+
+        .breadcrumb a {
+            color: var(--tibetan-turquoise);
+            text-decoration: none;
+        }
+
+        .text-title {
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid var(--tibetan-gold);
+            background: linear-gradient(45deg, var(--deep-maroon), var(--tibetan-maroon));
+        }
+
+        .text-title h1 {
+            color: var(--tibetan-gold);
+            margin: 0 0 10px 0;
+            font-size: 24px;
+        }
+
+        .text-title h2 {
+            color: var(--tibetan-turquoise);
+            margin: 5px 0;
+            font-size: 20px;
+        }
+
+        .text-title h3 {
+            color: #ffffff;
+            margin: 5px 0;
+            font-size: 18px;
+        }
+
+        .text-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--tibetan-gold);
+            border-radius: 5px;
+        }
+
+        .section-title {
+            color: var(--tibetan-turquoise);
+            font-size: 18px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--tibetan-gold);
+        }
+
+        .text-content {
+            white-space: pre-wrap;  /* This preserves your line breaks */
+            padding: 10px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .english-text {
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        .sanskrit-text {
+            color: var(--tibetan-turquoise);
+            font-size: 16px;
+        }
+
+        .devanagari-text {
+            color: var(--tibetan-gold);
+            font-size: 18px;
+        }
+
+        .counter {
+            text-align: center;
+            margin-top: 20px;
+            font-family: "Courier New", Courier, monospace;
+            color: var(--tibetan-gold);
+            border: 3px double var(--tibetan-gold);
+            padding: 10px;
+            background: linear-gradient(45deg, #000000, var(--deep-maroon));
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .text-title h1 { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="prayer-flags"></div>
+        
+        <div class="breadcrumb">
+            [<a href="index.html">HOME</a>] > [<a href="tantras.html">TANTRAS</a>] > CURRENT TEXT
+        </div>
+
+        <div class="text-title">
+            <h1>The Heart Sutra</h1>
+            <h2>Prajñāpāramitāhṛdaya</h2>
+            <h3>प्रज्ञापारमिता हृदय</h3>
+        </div>
+
+        <div class="text-section">
+            <div class="section-title">English Translation</div>
+            <div class="text-content english-text">
+Om. Homage to the Blessed Noble Perfection of Wisdom.
+
+While practicing the deep practice of the Perfection of Wisdom, the noble Bodhisattva Avalokiteśvara observed and saw that the five aggregates are empty of inherent nature.
+
+Here, Śāriputra, form is emptiness, and emptiness is form. Form is not different from emptiness, and emptiness is not different from form. Whatever is form is emptiness; whatever is emptiness is form.
+
+In the same way, sensation, perception, mental formations, and consciousness are also like this.
+
+Here, Śāriputra, all phenomena are characterized by emptiness: they are neither arising nor ceasing, neither tainted nor pure, neither decreasing nor increasing.
+
+Therefore, Śāriputra, in emptiness there is no form, no sensation, no perception, no mental formations, no consciousness;
+
+No eye, no ear, no nose, no tongue, no body, no mind;
+
+No forms, no sounds, no smells, no tastes, no touchables, no mental objects;
+
+No realm of the eye up to no realm of mind-consciousness;
+
+No ignorance and also no ending of ignorance, up to no old age and death, and no ending of old age and death;
+
+No suffering, no origin of suffering, no cessation of suffering, no path;
+
+No wisdom, no attainment, and no non-attainment.
+
+Therefore, Śāriputra, because there is no attainment, the Bodhisattva, relying on the Perfection of Wisdom, dwells without mental obscurations.
+
+Because there is no mental obscuration, he is unafraid, having transcended all misconceptions, and reaches ultimate Nirvāṇa.
+
+All the Buddhas of the three times, relying on the Perfection of Wisdom, fully awaken to the unsurpassed, true, complete enlightenment.
+
+Therefore, one should know that the Perfection of Wisdom is the great mantra, the mantra of great knowledge, the unsurpassed mantra, the mantra equal to the unequaled, the mantra that calms all suffering, true because it is not deceptive. The mantra of the Perfection of Wisdom is proclaimed:
+
+Thus: "Gone, gone, gone beyond, gone altogether beyond, awakening, svāhā!"
+
+Thus ends the Heart of the Perfection of Wisdom.
+</div>
+        </div>
+
+        <div class="text-section">
+            <div class="section-title">Sanskrit Transliteration</div>
+            <div class="text-content sanskrit-text">
+oṃ namo bhagavatyai āryaprajñāpāramitāyai
+
+ārya avalokiteśvaro bodhisattvo gambhīrāṃ prajñāpāramitā caryāṃ caramāṇo vyavalokayati sma: pañca skandhās tāṃś ca svabhāva śūnyān paśyati sma
+
+iha śāriputra rūpaṃ śūnyatā śūnyataiva rūpaṃ rūpān na pṛthak śūnyatā śūnyatāyā na pṛthag rūpaṃ yad rūpaṃ sā śūnyatā yā śūnyatā tad rūpaṃ
+
+evam eva vedanā saṃjñā saṃskārā vijñānaṃ
+
+iha śāriputra sarva dharmāḥ śūnyatā lakṣaṇā anutpannā aniruddhā amalā avimalā anūnā aparipūrṇāḥ
+
+tasmāc chāriputra śūnyatāyāṃ na rūpaṃ na vedanā na saṃjñā na saṃskārā na vijñānaṃ
+
+na cakṣuḥ śrotra ghraṇa jihvā kāya manaḥ
+
+na rūpa śabda gandha rasa spraṣṭavya dharmāḥ
+
+na cakṣur dhātur yāvan na mano vijñāna dhātuḥ
+
+na avidyā nāvidyā kṣayo yāvan na jarā maraṇaṃ na jarā maraṇa kṣayo
+
+na duḥkha samudaya nirodha mārgaḥ
+
+na jñānaṃ na prāptir na aprāptiḥ
+
+tasmāc chāriputra aprāptitvād bodhisattvasya prajñāpāramitām āśritya viharaty acittāvaraṇaḥ
+
+cittāvaraṇa nāstitvād atrasto viparyāsa atikrāntaḥ niṣṭhā nirvāṇaḥ
+
+tryadhva vyavasthitāḥ sarva buddhāḥ prajñāpāramitām āśritya anuttarāṃ samyaksaṃbodhim abhisambuddhāḥ
+
+tasmāj jñātavyam prajñāpāramitā mahāmantraḥ mahāvidyā mantraḥ anuttara mantraḥ asamasama mantraḥ sarva duḥkha praśamanaḥ satyam amithyatvāt prajñāpāramitāyām ukto mantraḥ
+
+tadyathā: gate gate pāragate pārasaṃgate bodhi svāhā
+
+iti prajñāpāramitā hṛdayaṃ samāptam
+</div>
+        </div>
+
+        <div class="text-section">
+            <div class="section-title">Devanagari Script</div>
+            <div class="text-content devanagari-text">
+ॐ नमो भगवत्यै आर्यप्रज्ञापारमितायै
+
+आर्य अवलोकितेश्वरो बोधिसत्त्वो गम्भीरां प्रज्ञापारमिता चर्याम् चरमाणो व्यावलोकयति स्म: पञ्च स्कन्धास् तांश् च स्वभाव शून्यान् पश्यति स्म
+
+इह शारिपुत्र रूपं शून्यतां शून्यतैव रूपं रूपान् न पृथक् शून्यतां शून्यतायां न पृथग् रूपं यद् रूपं सा शून्यतां या शून्यतां तद् रूपं
+
+एवं एव वेदना संज्ञा संस्काराः विज्ञानम्
+
+इह शारिपुत्र सर्व धर्माः शून्यता लक्षणा अनुत्पन्ना अनिरुद्धा अमला अविमला अनुना अपरिपूर्णाः
+
+तस्मात् शारिपुत्र शून्यतायां न रूपं न वेदना न संज्ञा न संस्काराः न विज्ञानम्
+
+न चक्षुः श्रोत्र घ्राण जिह्वा काया मनः
+
+न रूप शब्‍द गन्ध रस स्पृष्टव्य धर्माः
+
+न चक्षुर धातुर् यावन् न मनो विज्ञान धातुः
+
+न अविद्या नाविद्या क्षयो यावन् न जरा मरणं न जरा मरण क्षयो
+
+न दुःख समुदय निरोध मार्गः
+
+न ज्ञानं न प्राप्तिर्न अप्राप्तिः
+
+तस्मात् शारिपुत्र अप्राप्तित्वाद् बोधिसत्त्वस्य प्रज्ञापारमितां आश्रित्य विहरति अचित्तावरणः
+
+चित्तावरण नास्तित्वाद् अत्रस्तो विपर्यास अतिक्रान्तः निष्ठा निर्वाणः
+
+त्र्यध्व व्यवस्थिताः सर्व बुद्धाः प्रज्ञापारमितां आश्रित्य अनुत्तरां सम्यग्सम्बोधिम् अभिसम्बुद्धाः
+
+तस्माज् ज्ञातव्यं प्रज्ञापारमिता महामन्त्रः महाविद्या मन्त्रः अनुत्तर मन्त्रः असमसम मन्त्रः सर्व दुःख प्रशमन् सत्य अमित्यत्‍वात् प्रज्ञापारमितायाम् उक्तो मन्त्रः
+
+तद्‍यथा: गते गते पारगते पारसंगते बोधि स्वाहा
+
+इति प्रज्ञापारमिता हृदयं समाप्तम्
+</div>
+        </div>
+        
+        <div class="counter">
+            ⚡ Preserving Wisdom... ⚡
+            <br>
+            <div class="hit-counter">Text Viewings: 000,108</div>
+            <marquee scrollamount="2" direction="right">
+                ▂▃▅▇█▓▒░۩۞۩ Digital Dharma ۩۞۩░▒▓█▇▅▃▂
+            </marquee>
+            <br>
+            <small>
+                Last Updated: During the Waxing Moon
+                <br>
+                Best viewed in Netscape Navigator 4.0 at 800x600
+            </small>
+        </div>
+    </div>
+</body>
+</html>

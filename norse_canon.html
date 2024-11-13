@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ᚠᚢᚦᚨᚱᚲ - Digital Norse Library - ᚱᚢᚾᛖᛊ</title>
+    <style>
+        :root {
+            --norse-dark-blue: #2C3E50;
+            --norse-gold: #D4AF37;
+            --norse-silver: #C0C0C0;
+            --norse-grey: #7F8C8D;
+            --norse-black: #1C1C1C;
+            --norse-red: #C0392B;
+        }
+
+        body {
+            background: var(--norse-dark-blue);
+            color: #ffffff;
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .runic-border {
+            height: 50px;
+            background: url('runic-border.png') repeat-x;
+            margin-bottom: 20px;
+            border-top: 2px solid var(--norse-gold);
+            border-bottom: 2px solid var(--norse-gold);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--norse-grey);
+            padding: 20px;
+            border: 3px solid var(--norse-gold);
+            border-radius: 10px;
+            box-shadow: 0 0 15px var(--norse-gold), inset 0 0 15px var(--norse-gold);
+        }
+        
+        .welcome-banner {
+            background: var(--norse-black);
+            text-align: center;
+            padding: 10px;
+            margin: 20px 0;
+            border: 1px solid var(--norse-gold);
+            color: var(--norse-silver);
+            font-family: "Old Standard TT", serif;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: var(--norse-gold);
+            text-shadow: 2px 2px 4px #000;
+            padding: 20px;
+            border: 2px solid var(--norse-gold);
+            background: linear-gradient(45deg, rgba(44, 62, 80, 0.8), rgba(28, 28, 28, 0.8));
+            border-radius: 10px;
+            font-family: "Old Standard TT", serif;
+        }
+        
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+            font-family: "Courier New", monospace;
+        }
+        
+        .menu-item {
+            color: var(--norse-silver);
+            text-decoration: none;
+        }
+        
+        .menu-item:hover {
+            color: var(--norse-gold);
+        }
+        
+        .marquee {
+            background: linear-gradient(45deg, var(--norse-black), var(--norse-grey));
+            padding: 10px;
+            margin: 20px 0;
+            text-align: center;
+            border: 2px solid var(--norse-gold);
+            font-family: "Courier New", monospace;
+            color: var(--norse-gold);
+        }
+        
+        .navigation {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding: 20px 0;
+        }
+        
+        .nav-item {
+            background: linear-gradient(45deg, var(--norse-black), var(--norse-grey));
+            padding: 20px;
+            border: 1px solid var(--norse-gold);
+            border-radius: 5px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+        
+        .nav-item:hover {
+            transform: scale(1.05) rotate(-2deg);
+            box-shadow: 0 0 20px var(--norse-gold);
+        }
+        
+        .nav-item a {
+            color: var(--norse-gold);
+            text-decoration: none;
+            display: block;
+        }
+        
+        .nav-item h3 {
+            margin: 0 0 10px 0;
+            font-size: 24px;
+            text-shadow: 2px 2px 4px #000;
+            font-family: "Old Standard TT", serif;
+        }
+        
+        .description {
+            color: #ffffff;
+            font-size: 0.9em;
+            margin-top: 10px;
+            line-height: 1.4;
+            font-family: "Times New Roman", Times, serif;
+        }
+        
+        .counter {
+            text-align: center;
+            margin-top: 20px;
+            font-family: "Courier New", Courier, monospace;
+            color: var(--norse-gold);
+            border: 3px double var(--norse-gold);
+            padding: 10px;
+            background: linear-gradient(45deg, #000000, var(--norse-dark-blue));
+        }
+        
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .hit-counter {
+            font-family: "Digital", "Courier New", monospace;
+            background: #000;
+            padding: 5px 10px;
+            border: 2px inset #808080;
+            color: var(--norse-silver);
+        }
+        
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            h1 { font-size: 24px; }
+            .navigation { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="runic-border"></div>
+        
+        <div class="welcome-banner">
+            <blink>ᚠ Welcome to the Digital Norse Library ᚠ</blink><br>
+            Best viewed with the wisdom of Odin<br>
+            Loading runes... Please wait...
+        </div>
+
+        <h1>
+            ᛞᛁᚷᛁᛏᚨᛚ ᚾᛟᚱᛋᛖ ᛚᛁᛒᚱᚨᚱᛁ
+        </h1>
+        
+        <div class="menu">
+            [<a href="#" class="menu-item">HOME</a>]
+            [<a href="#" class="menu-item">SAGAS</a>]
+            [<a href="#" class="menu-item">EDDA</a>]
+            [<a href="#" class="menu-item">RUNES</a>]
+            [<a href="#" class="menu-item">CONTACT</a>]
+        </div>
+        
+        <div class="marquee">
+            <marquee scrollamount="3" behavior="alternate">
+                ⚔️ In the halls of Valhalla, we gather ancient wisdom ⚔️
+            </marquee>
+        </div>
+        
+        <div class="navigation">
+            <div class="nav-item">
+                <a href="sagas.html">
+                    <h3>🔥 Sagas 🔥</h3>
+                    <div class="description">Epic tales of Norse heroes and legends.</div>
+                </a>
+            </div>
+            
+            <div class="nav-item">
+                <a href="eddas.html">
+                    <h3>🌟 Eddas 🌟</h3>
+                    <div class="description">Poetic and Prose Eddas containing mythological lore.</div>
+                </a>
+            </div>
+            
+            <div class="nav-item">
+                <a href="runes.html">
+                    <h3>🔮 Runes 🔮</h3>
+                    <div class="description">Ancient runic inscriptions and meanings.</div>
+                </a>
+            </div>
+            
+            <div class="nav-item">
+                <a href="mythology.html">
+                    <h3>🌌 Mythology 🌌</h3>
+                    <div class="description">Stories of gods, giants, and the nine worlds.</div>
+                </a>
+            </div>
+            
+            <div class="nav-item">
+                <a href="history.html">
+                    <h3>⚓ History ⚓</h3>
+                    <div class="description">Historical accounts of the Viking Age.</div>
+                </a>
+            </div>
+            
+            <div class="nav-item">
+                <a href="artifacts.html">
+                    <h3>🛡️ Artifacts 🛡️</h3>
+                    <div class="description">Discover relics from the Norse era.</div>
+                </a>
+            </div>
+        </div>
+        
+        <div class="badges">
+            <img src="/api/placeholder/88/31" alt="Made with Mjölnir" />
+            <img src="/api/placeholder/88/31" alt="Valhalla Approved" />
+            <img src="/api/placeholder/88/31" alt="Best with 1024x768" />
+        </div>
+        
+        <div class="counter">
+            ⚡ Exploring Yggdrasil... ⚡
+            <br>
+            <div class="hit-counter">Vikings Visited: 000,133,700</div>
+            <marquee scrollamount="2" direction="right">
+                ▂▃▅▇█▓▒░⚔️ Unveiling the Norse Legacy ⚔️░▒▓█▇▅▃▂
+            </marquee>
+            <br>
+            <small>
+                Crafted with 🛠️ and 🩸 of the North
+                <br>
+                Best viewed with the Allfather's eye at 1024x768
+                <br>
+                Last Updated: Awaiting Ragnarok
+            </small>
+        </div>
+    </div>
+</body>
+</html>
