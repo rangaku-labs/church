@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>★·.·´¯`·.·★ Digital Mahayana Library - Text Display ★·.·´¯`·.·★</title>
+    <style>
+        :root {
+            --tibetan-maroon: #800000;
+            --tibetan-gold: #FFD700;
+            --tibetan-turquoise: #40E0D0;
+            --deep-maroon: #4A0000;
+            --prayer-flag-blue: #0066CC;
+            --prayer-flag-white: #FFFFFF;
+            --prayer-flag-red: #CC0000;
+            --prayer-flag-green: #006600;
+            --prayer-flag-yellow: #FFCC00;
+        }
+
+        body {
+            background: var(--tibetan-maroon);
+            color: #ffffff;
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .prayer-flags {
+            height: 30px;
+            background: repeating-linear-gradient(
+                90deg,
+                var(--prayer-flag-blue) 0px,
+                var(--prayer-flag-blue) 100px,
+                var(--prayer-flag-white) 100px,
+                var(--prayer-flag-white) 200px,
+                var(--prayer-flag-red) 200px,
+                var(--prayer-flag-red) 300px,
+                var(--prayer-flag-green) 300px,
+                var(--prayer-flag-green) 400px,
+                var(--prayer-flag-yellow) 400px,
+                var(--prayer-flag-yellow) 500px
+            );
+            animation: wave 2s infinite linear;
+            margin-bottom: 20px;
+            border-top: 2px solid var(--tibetan-gold);
+            border-bottom: 2px solid var(--tibetan-gold);
+        }
+
+        @keyframes wave {
+            0% { background-position: 0 0; }
+            100% { background-position: 500px 0; }
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--deep-maroon);
+            padding: 20px;
+            border: 3px solid var(--tibetan-gold);
+            border-radius: 10px;
+            box-shadow: 0 0 15px var(--tibetan-gold), inset 0 0 15px var(--tibetan-gold);
+        }
+
+        .breadcrumb {
+            background: #000000;
+            padding: 5px;
+            margin-bottom: 20px;
+            color: var(--tibetan-turquoise);
+        }
+
+        .breadcrumb a {
+            color: var(--tibetan-turquoise);
+            text-decoration: none;
+        }
+
+        .text-title {
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px solid var(--tibetan-gold);
+            background: linear-gradient(45deg, var(--deep-maroon), var(--tibetan-maroon));
+        }
+
+        .text-title h1 {
+            color: var(--tibetan-gold);
+            margin: 0 0 10px 0;
+            font-size: 24px;
+        }
+
+        .text-title h2 {
+            color: var(--tibetan-turquoise);
+            margin: 5px 0;
+            font-size: 20px;
+        }
+
+        .text-title h3 {
+            color: #ffffff;
+            margin: 5px 0;
+            font-size: 18px;
+        }
+
+        .text-section {
+            margin: 30px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--tibetan-gold);
+            border-radius: 5px;
+        }
+
+        .section-title {
+            color: var(--tibetan-turquoise);
+            font-size: 18px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--tibetan-gold);
+        }
+
+        .text-content {
+            white-space: pre-wrap;  /* This preserves your line breaks */
+            padding: 10px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        .english-text {
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        .sanskrit-text {
+            color: var(--tibetan-turquoise);
+            font-size: 16px;
+        }
+
+        .devanagari-text {
+            color: var(--tibetan-gold);
+            font-size: 18px;
+        }
+
+        .counter {
+            text-align: center;
+            margin-top: 20px;
+            font-family: "Courier New", Courier, monospace;
+            color: var(--tibetan-gold);
+            border: 3px double var(--tibetan-gold);
+            padding: 10px;
+            background: linear-gradient(45deg, #000000, var(--deep-maroon));
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .text-title h1 { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="prayer-flags"></div>
+        
+        <div class="breadcrumb">
+            [<a href="index.html">HOME</a>] > [<a href="tantras.html">TANTRAS</a>] > CURRENT TEXT
+        </div>
+
+        <div class="text-title">
+            <h1>The Thirty-Six Sacred Praises of Chakrasamvara</h1>
+            <h2>Ṣaṭtriṃśatsaṃvarastutiḥ</h2>
+            <h3>षट्त्रिंशत्संवरस्तुतिः</h3>
+        </div>
+
+        <div class="text-section">
+            <div class="section-title">English Translation</div>
+            <div class="text-content english-text">
+Homage to the Glorious Chakrasamvara
+
+I bow with all my being to mighty Samvara and the yogini Varahi,
+To the Master of the Web of Yoginis
+
+I honor Dakini, and likewise Lama, Khandaroha the Beautiful One,
+And the four nectar vessels filled with awakening essence
+
+I bow to Khandakapala Samvara, arisen from Pulliramalaya,
+The heroic one in fierce embrace, established at the crown
+
+I honor the one born from Jalandhara, the Great Skeleton Samvara,
+The hero embraced by Chandali, dwelling at the peak
+
+I honor the one arisen from Oddiyana, Samvara named Skeleton,
+United with Prabhavati, established at the right ear
+
+I honor Samvara of fearsome fangs, dwelling in the Arbuda seat,
+United with Mahanasa, established at the back
+
+I honor the one born from Godavari, the Hero-Wine Samvara,
+The one named Heroic Wisdom in union, dwelling at the left ear
+
+I honor the hero born from Ramesvara, Samvara named Infinite Light,
+The lord in union with Kharvari, dwelling between the eyebrows
+
+I honor the lord born from Devikota, Samvara named Diamond Radiance,
+United with Lankesvari, dwelling at the corner of the eye
+
+I honor the one born from the place called Maru, Samvara of the Diamond Body,
+United with Tree-Shade, dwelling at the shoulder
+
+I honor the hero born in Kamrupa, Samvara named Finger,
+United with Airavati, dwelling at the armpit
+
+I honor the one born at the Om-place, the Matted Diamond Samvara,
+The hero embraced by Bhairavi, arising at the body's joint
+
+I honor the lord born of the Three Birds, Samvara named Great Hero,
+United with Wind-Speed, dwelling at the navel
+
+I honor the one born in Kausala, the Diamond Sound Samvara,
+United with Wine-Drinker, arising at the tip of the nose
+
+I honor the one born at the Kalinga seat, Samvara named Beautiful Light,
+United with Dark Goddess, arising at the face
+
+I honor the hero born at Lampaka's place, Samvara named Diamond Radiance,
+The hero embraced by Subhadra, arising at the throat
+
+I honor the one born at the seat called Kanchi, Great Terrible Samvara,
+United with Horse-Ear, dwelling in the heart's center
+
+I honor the hero born from the Himalayas, Samvara named Deformed Eye,
+United with Bird-Face, gone to the secret place
+
+I honor the one born in Ghost City, Samvara named Great Power,
+United with Wheel-Speed, gone to the mark of gender
+
+I honor the one born from the Cave-land, Samvara named Diamond Jewel,
+United with Khandaroha, dwelling in the secret center
+
+I honor the hero born in the Saurashtra land, Samvara named Horse-Neck,
+The hero embraced by Shaundini, dwelling in the thigh's center
+
+I honor the one born on Golden Isle, Womb-of-Space Samvara,
+United with Wheel-Armored One, gone to the middle of the shin
+
+I honor the hero dwelling in City-seat, Samvara named Glorious Heruka,
+The hero embraced by Good Heroine, dwelling in the fingers
+
+I honor the one born in the Sindhu land, Samvara named Lotus Dance,
+United with Great Power, gone to the top of the foot
+
+I honor the one born at the Wind-seat, Samvara named Illuminator,
+United with Wheel-Turner, dwelling in the middle of the big toe
+
+I honor the one born of Kulata, Samvara named Diamond Being,
+United with Great Energy, gone to both knees
+
+I honor the hero placed at the eastern gate, Samvara named Diamond Fierce,
+The hero embraced by Crow-Face, the leader of gods
+
+I honor the one dwelling at the northern gate, Samvara named Diamond Fire,
+United with Owl-Face, the leader of nature spirits
+
+I honor the hero dwelling at the western gate, Samvara named Diamond Crown,
+The hero in union with Dog-Face, the lord of serpents
+
+I honor the one dwelling at the southern gate, Coiled Diamond Samvara,
+United with Boar-Face, the leader of death
+
+I honor the one dwelling in the southeast, Samvara named Diamond Spirit,
+United with Death's Tusk, the leader of fire
+
+I honor the one dwelling in the southwest, Samvara named Diamond Nail,
+United with Death's Messenger, the lord of demons
+
+I honor the one dwelling in the northwest, the one called Diamond Great Power,
+United with Death's Fang, the lord of wind
+
+I honor the one dwelling in the northeast, Terrifying Diamond Samvara,
+United with Death's Crusher, the leader of spirits
+
+I honor all these deities well-established in all directions,
+All the heroes and heroines, and Heruka the supreme lord
+
+The deity who is innate bliss, completely pure, adorned with the dance,
+Dwelling amidst the web of dakinis, known through inner wisdom
+
+Having praised this wheel of deities, whatever merit I have gained,
+By that virtue may the world be devoted to the Diamond Sky-Goer
+
+Here ends the Praise of the Mandala Circle of the Glorious Thirty-Six Samvara Host </div>
+        </div>
+
+        <div class="text-section">
+            <div class="section-title">Sanskrit Transliteration</div>
+            <div class="text-content sanskrit-text">
+śrīcakrasaṃvarāya namaḥ
+
+śrīsaṃvaraṃ mahāvīraṃ vārāhīṃ cāpi yoginīm
+namāmi sarvabhāvena yoginījālanāyakam
+
+ḍākinīṃ ca tathā lāmāṃ khaṇḍarohāṃ ca rūpiṇīm
+caturo'mṛtabhāṇḍāṃśca bodhicittena pūritān
+
+pullīramalayodbhūtaṃ khaṇḍakapālasaṃvaram
+pracaṇḍāliṅgaṇaṃ vīraṃ namāmi śirasi sthitam
+
+jālandharātsamutpannaṃ mahākaṃkālasaṃvaram
+caṇḍālyāliṅgaṇaṃ vīraṃ śikhādeśe sthitaṃ name
+
+oḍiyānātsamudbhūtaṃ kaṃkālanāma saṃvaram
+prabhāvatīsamāpannaṃ savyakarṇasthitaṃ name
+
+arbudapīṭhamadhyasthaṃ saṃvaraṃ vikaṭadaṃṣṭriṇam
+mahānāsāsamāpannaṃ pṛṣṭhadeśe sthitaṃ name
+
+godāvarīsamudbhūtaṃ surāvīriṇasaṃvaram
+saṃpuṭaṃ vīramatyākhyā vāmakarṇasthitaṃ name
+
+rāmeśvarodbhavaṃ vīraṃ amitābhākhyasaṃvaram
+kharvarosaṃpuṭaṃ nāthaṃ bhruvormadhyasthitaṃ name
+
+devīkoṭodbhavaṃ nāthaṃ vajraprabhākhyasaṃvaram
+laṅkeśvarīsamāpannaṃ namāmi netrakoṇagam
+
+māravākhyātsamutpannaṃ vajradehākhyasaṃvaram
+drumacchāyāsamāpannaṃ namāmi skandhadeśagam
+
+kāmarūpodbhavaṃ vīraṃ aṅgulikākhyasaṃvaram
+airāvatīsamāpannaṃ namāmi kakṣadeśagam
+
+okārasthānasaṃjātaṃ vajrajaṭilasaṃvaram
+bhairavāliṅgaṇaṃ vīraṃ tanuyugodbhavaṃ name
+
+triśakunyadbhavaṃ nāthaṃ mahāvīrākhyasaṃvaram
+vāyuvegāsamāpannaṃ nābhideśasthitaṃ name
+
+kauśalāyāṃ samudbhūtaṃ vajrahūkārasaṃvaram
+surābhakṣīsamāpannaṃ namāmi nāsikāgrajam
+
+kaliṅgapīṭhasaṃjātaṃ suprabhānāma saṃvaram
+śyāmādevī samāpannaṃ namāmi mukhabhāgajam
+
+lampākasthānasaṃbhūtaṃ vajraprabhākhyasaṃvaram
+subhadrāliṅgaṇaṃ vīraṃ kaṇṭhadeśodbhavaṃ name
+
+kāñcyākhyapīṭhasaṃjātaṃ mahābhairavasaṃvaram
+hayakarṇāsamāpannaṃ namāmi hṛdimadhyagam
+
+himālayodbhavaṃ vīraṃ virūpākṣākhyasaṃvaram
+khagānanāsamāpannaṃ meḍhrasthānagataṃ name
+
+pretapuryāṃ samudbhūtaṃ mahābalākhyasaṃvaram
+cakravegāsamāpannaṃ liṅgasthānagataṃ name
+
+guhadeśātsamudbhūtaṃ ratnavajrākhyasaṃvaram
+khaṇḍarohāsamāpannaṃ namāmi gudamadhyagam
+
+saurāṣṭradeśasaṃbhūtaṃ hayagrīvākhyasaṃvaram
+śauṇḍinyāliṅgaṇaṃ vīraṃ namāmi urumadhyagam
+
+suvarṇadvīpasaṃjātam ākāśagarbhasaṃvaram
+cakravarmiṇīsamāpannaṃ jaṅghāmadhyagataṃ name
+
+nagarapīṭhamadhyasthaṃ śrīherukākhyasaṃvaram
+suvīrāliṅgaṇaṃ vīraṃ namāmyaṅgulivartinam
+
+sindhudeśasamudbhūtaṃ padmanṛtyākhyasaṃvaram
+mahābalāsamāpannaṃ pādapṛṣṭhagataṃ name
+
+marutīpīṭhasaṃjātaṃ vairocanākhyasaṃvaram
+cakravartinīsamāpannaṃ namāmyaṅguṣṭhamadhyagam
+
+kulatāyāḥ samudbhūtaṃ vajrasattvākhyasaṃvaram
+mahāvīryāsamāpannaṃ jānudvayagata name
+
+pūrvadvāre sthitaṃ vīraṃ vajracaṇḍākhyasaṃvaram
+kākāsyāliṅgaṇaṃ vīraṃ namāmi suranāyakam
+
+uttaradvāramadhyasthaṃ vajrānalākhyasaṃvaram
+ulūkāsyāsamāpannaṃ namāmi yakṣanāyakam
+
+paścimadvāramadhyasthaṃ vajroṣṇīṣākhyasaṃvaram
+śvānāsyāsampuṭaṃ vīraṃ namāmi pannagādhipam
+
+dakṣiṇadvāramadhyasthaṃ vajrakuṇḍalisaṃvaram
+śūkarāsyāsamāpannaṃ namāmi yamanāyakam
+
+āgneyadigvimātrasthaṃ vajrayakṣākhyasaṃvaram
+yamadāḍhīsamāpannaṃ namāmi vahnināyakam
+
+nairṛtyadigvibhāṣasthaṃ vajrakīlākhyasaṃvaram
+yamadūtīsamāpannaṃ namāmi rākṣasādhipam
+
+vāyavyadigvibhāgasthaṃ vajramahābalāhvayam
+yamadaṃṣṭrīsamāpannaṃ namāmi pavanādhipam
+
+īśānadigvibhāgasthaṃ vajrabhīṣaṇasaṃvaram
+yamamathanīsamāpannaṃ namāmi bhūtanāyakam
+
+etāndevān namasyāmi digvidikṣu susaṃsthitān
+vīrān vīreśvarīḥ sarvā herukaṃ parameśvaram
+
+sahajānandātmakaṃ devaṃ viśuddhaṃ tāṇḍavānvitam
+ḍākinījālamadhyasthaṃ pratyātmavedyagocaram
+
+stutvedaṃ devatīcakraṃ yanmayopārjitaṃ śubham
+tena puṇyena loko'stu vajraḍākaparāyaṇaḥ
+
+śrī ṣaṭtriṃśatsaṃvaragaṇacakramaṇḍalastutiḥ samāptāḥ
+</div>
+        </div>
+
+        <div class="text-section">
+            <div class="section-title">Devanagari Script</div>
+            <div class="text-content devanagari-text">
+श्रीचक्रसंवराय नमः
+
+श्रीसंवरं महावीरं वाराहीं चापि योगिनीम्
+नमामि सर्वभावेन योगिनीजालनायकम्
+
+डाकिनीं च तथा लामां खण्डरोहां च रूपिणीम्
+चतुरोऽमृतभाण्डांश्च बोधिचित्तेन पूरितान्
+
+पुल्लीरमलयोद्भूतं खण्डकपालसंवरम्
+प्रचण्डालिङ्गणं वीरं नमामि शिरसि स्थितम्
+
+जालन्धरात्समुत्पन्नं महाकंकालसंवरम्
+चण्डाल्यालिङ्गणं वीरं शिखादेशे स्थितं नमे
+
+ओडियानात्समुद्भूतं कंकालनाम संवरम्
+प्रभावतीसमापन्नं सव्यकर्णस्थितं नमे
+
+अर्बुदपीठमध्यस्थं संवरं विकटदंष्ट्रिणम्
+महानासासमापन्नं पृष्ठदेशे स्थितं नमे
+
+गोदावरीसमुद्भूतं सुरावीरिणसंवरम्
+संपुटं वीरमत्याख्या वामकर्णस्थितं नमे
+
+रामेश्वरोद्भवं वीरं अमिताभाख्यसंवरम्
+खर्वरोसंपुटं नाथं भ्रुवोर्मध्यस्थितं नमे
+
+देवीकोटोद्भवं नाथं वज्रप्रभाख्यसंवरम्
+लङ्केश्वरीसमापन्नं नमामि नेत्रकोणगम्
+
+मारवाख्यात्समुत्पन्नं वज्रदेहाख्यसंवरम्
+द्रुमच्छायासमापन्नं नमामि स्कन्धदेशगम्
+
+कामरूपोद्भवं वीरं अङ्गुलिकाख्यसंवरम्
+ऐरावतीसमापन्नं नमामि कक्षदेशगम्
+
+ओकारस्थानसंजातं वज्रजटिलसंवरम्
+भैरवालिङ्गणं वीरं तनुयुगोद्भवं नमे
+
+त्रिशकुन्यद्भवं नाथं महावीराख्यसंवरम्
+वायुवेगासमापन्नं नाभिदेशस्थितं नमे
+
+कौशलायां समुद्भूतं वज्रहूकारसंवरम्
+सुराभक्षीसमापन्नं नमामि नासिकाग्रजम्
+
+कलिङ्गपीठसंजातं सुप्रभानाम संवरम्
+श्यामादेवी समापन्नं नमामि मुखभागजम्
+
+लम्पाकस्थानसंभूतं वज्रप्रभाख्यसंवरम्
+सुभद्रालिङ्गणं वीरं कण्ठदेशोद्भवं नमे
+
+काञ्च्याख्यपीठसंजातं महाभैरवसंवरम्
+हयकर्णासमापन्नं नमामि हृदिमध्यगम्
+
+हिमालयोद्भवं वीरं विरूपाक्षाख्यसंवरम्
+खगानानासमापन्नं मेढ्रस्थानगतं नमे
+
+प्रेतपुर्यां समुद्भूतं महाबलाख्यसंवरम्
+चक्रवेगासमापन्नं लिङ्गस्थानगतं नमे
+
+गुहदेशात्समुद्भूतं रत्नवज्राख्यसंवरम्
+खण्डरोहासमापन्नं नमामि गुदमध्यगम्
+
+सौराष्ट्रदेशसंभूतं हयग्रीवाख्यसंवरम्
+शौण्डिन्यालिङ्गणं वीरं नमामि उरुमध्यगम्
+
+सुवर्णद्वीपसंजातम् आकाशगर्भसंवरम्
+चक्रवर्मिणीसमापन्नं जङ्घामध्यगतं नमे
+
+नगरपीठमध्यस्थं श्रीहेरुकाख्यसंवरम्
+सुवीरालिङ्गणं वीरं नमाम्यङ्गुलिवर्तिनम्
+
+सिन्धुदेशसमुद्भूतं पद्मनृत्याख्यसंवरम्
+महाबलासमापन्नं पादपृष्ठगतं नमे
+
+मरुतीपीठसंजातं वैरोचनाख्यसंवरम्
+चक्रवर्तिनीसमापन्नं नमाम्यङ्गुष्ठमध्यगम्
+
+कुलतायाः समुद्भूतं वज्रसत्त्वाख्यसंवरम्
+महावीर्यासमापन्नं जानुद्वयगत नमे
+
+पूर्वद्वारे स्थितं वीरं वज्रचण्डाख्यसंवरम्
+काकास्यालिङ्गणं वीरं नमामि सुरनायकम्
+
+उत्तरद्वारमध्यस्थं वज्रानलाख्यसंवरम्
+उलूकास्यासमापन्नं नमामि यक्षनायकम्
+
+पश्चिमद्वारमध्यस्थं वज्रोष्णीषाख्यसंवरम्
+श्वानास्यासम्पुटं वीरं नमामि पन्नगाधिपम्
+
+दक्षिणद्वारमध्यस्थं वज्रकुण्डलिसंवरम्
+शूकरास्यासमापन्नं नमामि यमनायकम्
+
+आग्नेयदिग्विमात्रस्थं वज्रयक्षाख्यसंवरम्
+यमदाढीसमापन्नं नमामि वह्निनायकम्
+
+नैरृत्यदिग्विभाषस्थं वज्रकीलाख्यसंवरम्
+यमदूतीसमापन्नं नमामि राक्षसाधिपम्
+
+वायव्यदिग्विभागस्थं वज्रमहाबलाह्वयम्
+यमदंष्ट्रीसमापन्नं नमामि पवनाधिपम्
+
+ईशानदिग्विभागस्थं वज्रभीषणसंवरम्
+यममथनीसमापन्नं नमामि भूतनायकम्
+
+एतान्देवान् नमस्यामि दिग्विदिक्षु सुसंस्थितान्
+वीरान् वीरेश्वरीः सर्वा हेरुकं परमेश्वरम्
+
+सहजानन्दात्मकं देवं विशुद्धं ताण्डवान्वितम्
+डाकिनीजालमध्यस्थं प्रत्यात्मवेद्यगोचरम्
+
+स्तुत्वेदं देवतीचक्रं यन्मयोपार्जितं शुभम्
+तेन पुण्येन लोकोऽस्तु वज्रडाकपरायणः
+
+श्री षट्त्रिंशत्संवरगणचक्रमण्डलस्तुतिः समाप्ताः</div>
+        </div>
+        
+        <div class="counter">
+            ⚡ Preserving Wisdom... ⚡
+            <br>
+            <div class="hit-counter">Text Viewings: 000,108</div>
+            <marquee scrollamount="2" direction="right">
+                ▂▃▅▇█▓▒░۩۞۩ Digital Dharma ۩۞۩░▒▓█▇▅▃▂
+            </marquee>
+            <br>
+            <small>
+                Last Updated: During the Waxing Moon
+                <br>
+                Best viewed in Netscape Navigator 4.0 at 800x600
+            </small>
+        </div>
+    </div>
+</body>
+</html>
